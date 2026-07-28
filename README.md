@@ -1,7 +1,6 @@
 # ConformalLab
 
-A reproducible benchmarking framework for evaluating conformal prediction
-methods for Vision-Language Models under semantic distribution shift.
+A framework for evaluating conformal prediction methods for Vision-Language Models under semantic distribution shift.
 
 ## Goals
 
