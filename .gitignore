@@ -1,12 +1,15 @@
+# Python Runtime & Compiled Bytecode
 __pycache__/
 *.pyc
 *.pyo
 
+# Virtual Environments & Local Secrets
 .venv/
 venv/
 
 .env
 
+# Editor, OS & Notebook Caches
 .ipynb_checkpoints/
 
 .DS_Store
@@ -14,6 +17,7 @@ venv/
 .idea/
 .vscode/
 
+# Build Artifacts & Large Output Logs
 logs/*.log
 
 results/*/embeddings/
@@ -22,3 +26,18 @@ results/*/embeddings/
 
 build/
 dist/
+
+
+# Model weights & checkpoints 
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.onnx
+
+# Test & coverage caches
+.pytest_cache/
+.coverage
+
+# Raw datasets
+/data/
