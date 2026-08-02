@@ -1,0 +1,14 @@
+experiment:
+  id: EXP001
+
+model:
+  name: clip
+
+dataset:
+  name: imagenet
+
+calibration:
+  alpha: 0.1
+
+seed:
+  value: 42
