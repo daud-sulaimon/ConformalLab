@@ -18,3 +18,7 @@ rich
 pytest
 
 tqdm
+
+Pillow
+datasets
+huggingface_hub
