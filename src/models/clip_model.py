@@ -161,3 +161,9 @@ class CLIPModel(BaseModel):
         logit_scale = self._model.logit_scale.exp()
         similarity = logit_scale * image_embeddings @ text_embeddings.T
         return similarity.softmax(dim=-1)
+
+
+
+from src.models.manager import _MODEL_REGISTRY
+
+_MODEL_REGISTRY["clip"] = CLIPModel
