@@ -21,6 +21,7 @@ venv/
 logs/*.log
 
 results/*/embeddings/
+/embeddings/
 
 *.egg-info/
 
