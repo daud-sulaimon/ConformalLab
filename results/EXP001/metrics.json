@@ -1,0 +1,11 @@
+{
+  "experiment_id": "EXP001",
+  "model": "clip",
+  "dataset": "imagenet",
+  "num_test_images": 500,
+  "embedding_dimension": 512,
+  "top1_accuracy": 0.57,
+  "top5_accuracy": 0.858,
+  "mean_inference_time_per_image_seconds": 5.1244258880615234e-05,
+  "total_runtime_seconds": 142.93051648139954
+}

@@ -1,0 +1,501 @@
+image_index,true_label,predicted_label,confidence,correct
+0,window screen,mosquito net,0.0668,False
+1,"drum, membranophone, tympan",steel drum,0.1802,False
+2,agaric,agaric,0.8916,True
+3,"plow, plough",tractor,0.7772,False
+4,"washer, automatic washer, washing machine","washer, automatic washer, washing machine",0.5476,True
+5,Petri dish,Petri dish,0.8066,True
+6,"prairie chicken, prairie grouse, prairie fowl","prairie chicken, prairie grouse, prairie fowl",0.7479,True
+7,fur coat,fur coat,0.3993,True
+8,"oboe, hautboy, hautbois","oboe, hautboy, hautbois",0.1851,True
+9,"flatworm, platyhelminth","sea slug, nudibranch",0.3636,False
+10,pinwheel,pinwheel,0.9849,True
+11,"Cardigan, Cardigan Welsh corgi","Cardigan, Cardigan Welsh corgi",0.5961,True
+12,acorn squash,acorn squash,0.3607,True
+13,mountain tent,mountain tent,0.9606,True
+14,rapeseed,rapeseed,0.9894,True
+15,"black and gold garden spider, Argiope aurantia","black widow, Latrodectus mactans",0.3812,False
+16,packet,"book jacket, dust cover, dust jacket, dust wrapper",0.4394,False
+17,screwdriver,syringe,0.1868,False
+18,buckle,buckle,0.8483,True
+19,strainer,measuring cup,0.2060,False
+20,hatchet,"jinrikisha, ricksha, rickshaw",0.2352,False
+21,desk,desk,0.5557,True
+22,paper towel,"toilet tissue, toilet paper, bathroom tissue",0.4604,False
+23,Sussex spaniel,briard,0.6283,False
+24,"lab coat, laboratory coat","lab coat, laboratory coat",0.7494,True
+25,suspension bridge,suspension bridge,0.9218,True
+26,"killer whale, killer, orca, grampus, sea wolf, Orcinus orca","killer whale, killer, orca, grampus, sea wolf, Orcinus orca",0.9894,True
+27,trench coat,trench coat,0.9963,True
+28,soap dispenser,cocktail shaker,0.3616,False
+29,"bathing cap, swimming cap","bathing cap, swimming cap",0.7632,True
+30,"computer keyboard, keypad","computer keyboard, keypad",0.5634,True
+31,"violin, fiddle","violin, fiddle",0.8424,True
+32,"bobsled, bobsleigh, bob",lifeboat,0.3201,False
+33,bulbul,bulbul,0.4355,True
+34,weasel,weasel,0.9047,True
+35,"laptop, laptop computer","notebook, notebook computer",0.4648,False
+36,spoonbill,flamingo,0.5839,False
+37,knot,chain,0.3460,False
+38,"African elephant, Loxodonta africana",tusker,0.6938,False
+39,"corkscrew, bottle screw","corkscrew, bottle screw",0.8102,True
+40,toilet seat,"tench, Tinca tinca",0.2397,False
+41,"pitcher, ewer",soup bowl,0.2020,False
+42,"lycaenid, lycaenid butterfly","lycaenid, lycaenid butterfly",0.4243,True
+43,mongoose,"kit fox, Vulpes macrotis",0.3008,False
+44,"can opener, tin opener","rubber eraser, rubber, pencil eraser",0.2681,False
+45,altar,"organ, pipe organ",0.6867,False
+46,"dalmatian, coach dog, carriage dog","dalmatian, coach dog, carriage dog",0.4055,True
+47,"robin, American robin, Turdus migratorius","robin, American robin, Turdus migratorius",0.9886,True
+48,"barn spider, Araneus cavaticus","wolf spider, hunting spider",0.3557,False
+49,"toilet tissue, toilet paper, bathroom tissue",paper towel,0.3399,False
+50,mink,mink,0.4756,True
+51,"dingo, warrigal, warragal, Canis dingo","dingo, warrigal, warragal, Canis dingo",0.7709,True
+52,"axolotl, mud puppy, Ambystoma mexicanum","axolotl, mud puppy, Ambystoma mexicanum",0.9232,True
+53,"book jacket, dust cover, dust jacket, dust wrapper",comic book,0.3002,False
+54,"perfume, essence","perfume, essence",0.3441,True
+55,"three-toed sloth, ai, Bradypus tridactylus","three-toed sloth, ai, Bradypus tridactylus",0.6498,True
+56,dome,pickelhaube,0.7253,False
+57,"chiffonier, commode","wardrobe, closet, press",0.3666,False
+58,"harvestman, daddy longlegs, Phalangium opilio","harvestman, daddy longlegs, Phalangium opilio",0.9583,True
+59,steel arch bridge,steel arch bridge,0.3989,True
+60,"Maltese dog, Maltese terrier, Maltese",Shih-Tzu,0.3912,False
+61,flat-coated retriever,standard schnauzer,0.3606,False
+62,"green lizard, Lacerta viridis","green lizard, Lacerta viridis",0.4575,True
+63,"ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle","ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle",0.8857,True
+64,"king penguin, Aptenodytes patagonica","king penguin, Aptenodytes patagonica",0.9861,True
+65,"bakery, bakeshop, bakehouse","bakery, bakeshop, bakehouse",0.9971,True
+66,yawl,yawl,0.7195,True
+67,"dingo, warrigal, warragal, Canis dingo","dhole, Cuon alpinus",0.3724,False
+68,CD player,"home theater, home theatre",0.3893,False
+69,water jug,water bottle,0.8671,False
+70,park bench,park bench,0.9926,True
+71,"European gallinule, Porphyrio porphyrio","European gallinule, Porphyrio porphyrio",0.9881,True
+72,"black stork, Ciconia nigra","black stork, Ciconia nigra",0.8026,True
+73,black-and-tan coonhound,miniature pinscher,0.3947,False
+74,"golfcart, golf cart","golfcart, golf cart",0.9537,True
+75,"red-breasted merganser, Mergus serrator","red-breasted merganser, Mergus serrator",0.8982,True
+76,"television, television system","television, television system",0.7595,True
+77,"golfcart, golf cart",go-kart,0.4392,False
+78,"American chameleon, anole, Anolis carolinensis","ear, spike, capitulum",0.9563,False
+79,"porcupine, hedgehog","porcupine, hedgehog",0.7821,True
+80,bulletproof vest,"police van, police wagon, paddy wagon, patrol wagon, wagon, black Maria",0.2263,False
+81,dung beetle,dung beetle,0.3556,True
+82,"tiger shark, Galeocerdo cuvieri","grey whale, gray whale, devilfish, Eschrichtius gibbosus, Eschrichtius robustus",0.7544,False
+83,standard poodle,standard poodle,0.7069,True
+84,"racket, racquet","racket, racquet",0.7113,True
+85,beer bottle,beer glass,0.2368,False
+86,"breastplate, aegis, egis",mask,0.2988,False
+87,"clumber, clumber spaniel",Brittany spaniel,0.5128,False
+88,"bannister, banister, balustrade, balusters, handrail","bannister, banister, balustrade, balusters, handrail",0.8710,True
+89,cassette,cassette,0.4000,True
+90,envelope,"odometer, hodometer, mileometer, milometer",0.8556,False
+91,missile,"projectile, missile",0.3752,False
+92,"ram, tup","ram, tup",0.7944,True
+93,"chocolate sauce, chocolate syrup","chocolate sauce, chocolate syrup",0.9301,True
+94,"buckeye, horse chestnut, conker",earthstar,0.2609,False
+95,"feather boa, boa",maraca,0.1521,False
+96,"puffer, pufferfish, blowfish, globefish",sea urchin,0.8036,False
+97,analog clock,wall clock,0.3720,False
+98,earthstar,earthstar,0.9836,True
+99,langur,"squirrel monkey, Saimiri sciureus",0.2341,False
+100,joystick,holster,0.1697,False
+101,"balance beam, beam","parallel bars, bars",0.5527,False
+102,"green lizard, Lacerta viridis","common iguana, iguana, Iguana iguana",0.2515,False
+103,Granny Smith,Granny Smith,0.9121,True
+104,"cockroach, roach",toilet seat,0.5343,False
+105,umbrella,umbrella,0.9723,True
+106,acorn,"buckeye, horse chestnut, conker",0.3874,False
+107,steel drum,"jinrikisha, ricksha, rickshaw",0.6589,False
+108,green mamba,"green snake, grass snake",0.6454,False
+109,"seat belt, seatbelt","seat belt, seatbelt",0.8102,True
+110,wing,"warplane, military plane",0.0896,False
+111,school bus,school bus,0.9735,True
+112,espresso maker,espresso maker,0.2827,True
+113,"wood rabbit, cottontail, cottontail rabbit","wood rabbit, cottontail, cottontail rabbit",0.8301,True
+114,"lampshade, lamp shade",strainer,0.1569,False
+115,"otterhound, otter hound","Airedale, Airedale terrier",0.8441,False
+116,"African crocodile, Nile crocodile, Crocodylus niloticus","African crocodile, Nile crocodile, Crocodylus niloticus",0.9788,True
+117,"giant panda, panda, panda bear, coon bear, Ailuropoda melanoleuca","giant panda, panda, panda bear, coon bear, Ailuropoda melanoleuca",0.9782,True
+118,zebra,"impala, Aepyceros melampus",0.4946,False
+119,keeshond,keeshond,0.8753,True
+120,soup bowl,consomme,0.7830,False
+121,Leonberg,Leonberg,0.8595,True
+122,window shade,window shade,0.8214,True
+123,"chime, bell, gong","chime, bell, gong",0.6130,True
+124,acorn,fig,0.3378,False
+125,safety pin,necklace,0.7148,False
+126,cauliflower,cauliflower,0.7081,True
+127,"Walker hound, Walker foxhound","Saluki, gazelle hound",0.5761,False
+128,holster,holster,0.9459,True
+129,umbrella,umbrella,0.9738,True
+130,safe,safe,0.2476,True
+131,"Boston bull, Boston terrier","Boston bull, Boston terrier",0.5082,True
+132,basenji,"Ibizan hound, Ibizan Podenco",0.5675,False
+133,espresso maker,espresso maker,0.9619,True
+134,pomegranate,pomegranate,0.9170,True
+135,crane2,crane2,0.5023,True
+136,eggnog,eggnog,0.7576,True
+137,"promontory, headland, head, foreland",speedboat,0.2272,False
+138,"corkscrew, bottle screw","corkscrew, bottle screw",0.9560,True
+139,"giant panda, panda, panda bear, coon bear, Ailuropoda melanoleuca","giant panda, panda, panda bear, coon bear, Ailuropoda melanoleuca",0.9143,True
+140,"rock crab, Cancer irroratus","Dungeness crab, Cancer magister",0.2690,False
+141,"teddy, teddy bear",bassinet,0.6737,False
+142,"cougar, puma, catamount, mountain lion, painter, panther, Felis concolor","cheetah, chetah, Acinonyx jubatus",0.7885,False
+143,"frilled lizard, Chlamydosaurus kingi","frilled lizard, Chlamydosaurus kingi",0.8418,True
+144,jigsaw puzzle,jigsaw puzzle,0.7018,True
+145,mashed potato,potpie,0.8496,False
+146,"guinea pig, Cavia cobaya","guinea pig, Cavia cobaya",0.7931,True
+147,"groom, bridegroom","hoopskirt, crinoline",0.6151,False
+148,Rottweiler,Rottweiler,0.9615,True
+149,stone wall,stone wall,0.6045,True
+150,French bulldog,French bulldog,0.9080,True
+151,balloon,"gong, tam-tam",0.1740,False
+152,"saltshaker, salt shaker","saltshaker, salt shaker",0.3523,True
+153,"hot pot, hotpot","hot pot, hotpot",0.8977,True
+154,typewriter keyboard,sewing machine,0.3004,False
+155,"stinkhorn, carrion fungus","stinkhorn, carrion fungus",0.9326,True
+156,pier,suspension bridge,0.7687,False
+157,volcano,volcano,0.4510,True
+158,"tabby, tabby cat","tabby, tabby cat",0.4343,True
+159,totem pole,totem pole,0.9998,True
+160,dung beetle,quail,0.4505,False
+161,"doormat, welcome mat","doormat, welcome mat",0.8741,True
+162,"lumbermill, sawmill","thresher, thrasher, threshing machine",0.6013,False
+163,Sussex spaniel,Sussex spaniel,0.2639,True
+164,"submarine, pigboat, sub, U-boat",trimaran,0.5812,False
+165,"trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi","trailer truck, tractor trailer, trucking rig, rig, articulated lorry, semi",0.9860,True
+166,"buckeye, horse chestnut, conker","buckeye, horse chestnut, conker",0.9729,True
+167,"prairie chicken, prairie grouse, prairie fowl","ruffed grouse, partridge, Bonasa umbellus",0.6046,False
+168,"projectile, missile",missile,0.4642,False
+169,"golfcart, golf cart","jinrikisha, ricksha, rickshaw",0.4727,False
+170,baseball,shoji,0.3234,False
+171,bolete,bolete,0.6166,True
+172,spoonbill,spoonbill,0.7756,True
+173,four-poster,four-poster,0.4668,True
+174,Persian cat,Persian cat,0.5798,True
+175,"fire engine, fire truck","fire engine, fire truck",0.6781,True
+176,"Angora, Angora rabbit","Angora, Angora rabbit",0.9908,True
+177,"assault rifle, assault gun","assault rifle, assault gun",0.2446,True
+178,milk can,coffeepot,0.1997,False
+179,"wild boar, boar, Sus scrofa","brown bear, bruin, Ursus arctos",0.3695,False
+180,bulbul,coucal,0.9212,False
+181,weasel,"black-footed ferret, ferret, Mustela nigripes",0.4655,False
+182,"slide rule, slipstick","slide rule, slipstick",0.7309,True
+183,"colobus, colobus monkey","colobus, colobus monkey",0.7196,True
+184,"garden spider, Aranea diademata","garden spider, Aranea diademata",0.6790,True
+185,"spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish","American lobster, Northern lobster, Maine lobster, Homarus americanus",0.7506,False
+186,"bakery, bakeshop, bakehouse","crib, cot",0.3119,False
+187,goblet,"piggy bank, penny bank",0.5105,False
+188,vase,croquet ball,0.2771,False
+189,pill bottle,pill bottle,0.9452,True
+190,"switch, electric switch, electrical switch",padlock,0.1537,False
+191,drumstick,drumstick,0.7631,True
+192,"cucumber, cuke",plate,0.3974,False
+193,"quill, quill pen",syringe,0.4600,False
+194,"Tibetan terrier, chrysanthemum dog","English springer, English springer spaniel",0.3902,False
+195,"bicycle-built-for-two, tandem bicycle, tandem","bicycle-built-for-two, tandem bicycle, tandem",0.9634,True
+196,"Airedale, Airedale terrier","Airedale, Airedale terrier",0.4156,True
+197,chainlink fence,"cinema, movie theater, movie theatre, movie house, picture palace",0.0896,False
+198,"valley, vale","valley, vale",0.8352,True
+199,mousetrap,mousetrap,0.9485,True
+200,nipple,cocktail shaker,0.1254,False
+201,"toilet tissue, toilet paper, bathroom tissue","dining table, board",0.5003,False
+202,"grand piano, grand","grand piano, grand",0.8052,True
+203,"lighter, light, igniter, ignitor","ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin",0.0843,False
+204,rifle,oxcart,0.3952,False
+205,castle,castle,0.8572,True
+206,"cellular telephone, cellular phone, cellphone, cell, mobile phone","hand-held computer, hand-held microcomputer",0.5333,False
+207,"Scottish deerhound, deerhound","Scottish deerhound, deerhound",0.3906,True
+208,"Pekinese, Pekingese, Peke","Pekinese, Pekingese, Peke",0.9331,True
+209,oxcart,oxcart,0.6760,True
+210,bulbul,bulbul,0.9959,True
+211,"impala, Aepyceros melampus","impala, Aepyceros melampus",0.8752,True
+212,Yorkshire terrier,"Maltese dog, Maltese terrier, Maltese",0.2874,False
+213,alligator lizard,"thunder snake, worm snake, Carphophis amoenus",0.4034,False
+214,"tobacco shop, tobacconist shop, tobacconist","book jacket, dust cover, dust jacket, dust wrapper",0.7914,False
+215,"valley, vale","valley, vale",0.8840,True
+216,"dock, dockage, docking facility",yawl,0.3781,False
+217,"Dandie Dinmont, Dandie Dinmont terrier","Maltese dog, Maltese terrier, Maltese",0.3772,False
+218,parking meter,parking meter,0.7898,True
+219,"dishwasher, dish washer, dishwashing machine","dishwasher, dish washer, dishwashing machine",0.3546,True
+220,"bannister, banister, balustrade, balusters, handrail",turnstile,0.2086,False
+221,"grey fox, gray fox, Urocyon cinereoargenteus","kit fox, Vulpes macrotis",0.4819,False
+222,"Lhasa, Lhasa apso",Shih-Tzu,0.8715,False
+223,hair slide,"harmonica, mouth organ, harp, mouth harp",0.1759,False
+224,entertainment center,entertainment center,0.7722,True
+225,"porcupine, hedgehog","porcupine, hedgehog",0.2720,True
+226,"long-horned beetle, longicorn, longicorn beetle",cricket,0.3133,False
+227,screw,"corkscrew, bottle screw",0.1432,False
+228,"harmonica, mouth organ, harp, mouth harp","harmonica, mouth organ, harp, mouth harp",0.9782,True
+229,sombrero,sombrero,0.5042,True
+230,"borzoi, Russian wolfhound",kuvasz,0.5292,False
+231,"ice cream, icecream","ice cream, icecream",0.4893,True
+232,"rock beauty, Holocanthus tricolor",scuba diver,0.1929,False
+233,mortar,"corkscrew, bottle screw",0.2041,False
+234,"black widow, Latrodectus mactans","black widow, Latrodectus mactans",0.9542,True
+235,"starfish, sea star","starfish, sea star",0.9070,True
+236,"clumber, clumber spaniel","Old English sheepdog, bobtail",0.2846,False
+237,"axolotl, mud puppy, Ambystoma mexicanum","goldfish, Carassius auratus",0.5199,False
+238,"sunscreen, sunblock, sun blocker",lotion,0.6021,False
+239,"gar, garfish, garpike, billfish, Lepisosteus osseus","axolotl, mud puppy, Ambystoma mexicanum",0.3069,False
+240,Shih-Tzu,Shih-Tzu,0.6574,True
+241,snail,snail,0.8989,True
+242,mortar,guacamole,0.8152,False
+243,altar,altar,0.9775,True
+244,paper towel,"toilet tissue, toilet paper, bathroom tissue",0.8581,False
+245,agaric,agaric,0.6465,True
+246,cradle,bassinet,0.4318,False
+247,cannon,"binoculars, field glasses, opera glasses",0.6019,False
+248,"white wolf, Arctic wolf, Canis lupus tundrarum","white wolf, Arctic wolf, Canis lupus tundrarum",0.6952,True
+249,"whiptail, whiptail lizard","whiptail, whiptail lizard",0.6062,True
+250,"aircraft carrier, carrier, flattop, attack aircraft carrier","dock, dockage, docking facility",0.8703,False
+251,"dining table, board","dining table, board",0.9718,True
+252,wall clock,wall clock,0.6861,True
+253,"king crab, Alaska crab, Alaskan king crab, Alaska king crab, Paralithodes camtschatica","king crab, Alaska crab, Alaskan king crab, Alaska king crab, Paralithodes camtschatica",0.8001,True
+254,barbershop,barbershop,0.2042,True
+255,electric guitar,electric guitar,0.2318,True
+256,bell pepper,bell pepper,0.5310,True
+257,hatchet,"cleaver, meat cleaver, chopper",0.5268,False
+258,sarong,sarong,0.9598,True
+259,moped,moped,0.7734,True
+260,thimble,thimble,0.6758,True
+261,black-and-tan coonhound,black-and-tan coonhound,0.9596,True
+262,"sloth bear, Melursus ursinus, Ursus ursinus","sloth bear, Melursus ursinus, Ursus ursinus",0.9685,True
+263,"green snake, grass snake",vine snake,0.6010,False
+264,red wine,park bench,0.2241,False
+265,pretzel,pretzel,0.4859,True
+266,Crock Pot,Crock Pot,0.5711,True
+267,boxer,boxer,0.5311,True
+268,soccer ball,soccer ball,0.6402,True
+269,"prison, prison house","prison, prison house",0.1867,True
+270,bell pepper,bell pepper,0.9710,True
+271,redbone,black-and-tan coonhound,0.3837,False
+272,"sea slug, nudibranch","sea slug, nudibranch",0.7189,True
+273,barbell,"parallel bars, bars",0.2428,False
+274,"grocery store, grocery, food market, market","grocery store, grocery, food market, market",0.5249,True
+275,go-kart,go-kart,0.9893,True
+276,"harvester, reaper","harvester, reaper",0.8915,True
+277,"washbasin, handbasin, washbowl, lavabo, wash-hand basin","washbasin, handbasin, washbowl, lavabo, wash-hand basin",0.7634,True
+278,"sports car, sport car","racer, race car, racing car",0.6664,False
+279,"hen-of-the-woods, hen of the woods, Polyporus frondosus, Grifola frondosa","hen-of-the-woods, hen of the woods, Polyporus frondosus, Grifola frondosa",0.9049,True
+280,"binoculars, field glasses, opera glasses","binoculars, field glasses, opera glasses",0.8422,True
+281,"nematode, nematode worm, roundworm",coral fungus,0.2327,False
+282,coucal,coucal,0.9977,True
+283,"French horn, horn","French horn, horn",0.6784,True
+284,cheeseburger,cheeseburger,0.9853,True
+285,Bedlington terrier,miniature poodle,0.2802,False
+286,"cowboy hat, ten-gallon hat","cowboy hat, ten-gallon hat",0.7015,True
+287,"crib, cot",bassinet,0.9275,False
+288,dowitcher,dowitcher,0.9871,True
+289,"Old English sheepdog, bobtail","Old English sheepdog, bobtail",0.2436,True
+290,"chocolate sauce, chocolate syrup","chocolate sauce, chocolate syrup",0.7148,True
+291,"white wolf, Arctic wolf, Canis lupus tundrarum","white wolf, Arctic wolf, Canis lupus tundrarum",0.8490,True
+292,soccer ball,kuvasz,0.5702,False
+293,"guenon, guenon monkey","squirrel monkey, Saimiri sciureus",0.3521,False
+294,plastic bag,poncho,0.7557,False
+295,gyromitra,gyromitra,0.6244,True
+296,"rocking chair, rocker","rocking chair, rocker",0.7179,True
+297,isopod,"cockroach, roach",0.6799,False
+298,"hognose snake, puff adder, sand viper","night snake, Hypsiglena torquata",0.5978,False
+299,Blenheim spaniel,Brittany spaniel,0.2957,False
+300,"harmonica, mouth organ, harp, mouth harp",bib,0.1305,False
+301,"little blue heron, Egretta caerulea","little blue heron, Egretta caerulea",0.9674,True
+302,four-poster,"crib, cot",0.5963,False
+303,Welsh springer spaniel,Brittany spaniel,0.4925,False
+304,fur coat,"wardrobe, closet, press",0.3114,False
+305,"echidna, spiny anteater, anteater","echidna, spiny anteater, anteater",0.9178,True
+306,"cornet, horn, trumpet, trump","cornet, horn, trumpet, trump",0.3624,True
+307,"ringlet, ringlet butterfly","ringlet, ringlet butterfly",0.8898,True
+308,"grasshopper, hopper",cricket,0.6073,False
+309,"pineapple, ananas","pineapple, ananas",0.9855,True
+310,armadillo,armadillo,0.3209,True
+311,"sports car, sport car","sports car, sport car",0.6060,True
+312,"cornet, horn, trumpet, trump","flute, transverse flute",0.5327,False
+313,"French horn, horn","sax, saxophone",0.3910,False
+314,"submarine, pigboat, sub, U-boat",catamaran,0.4823,False
+315,"restaurant, eating house, eating place, eatery","restaurant, eating house, eating place, eatery",0.2968,True
+316,holster,bulletproof vest,0.4617,False
+317,Model T,Model T,0.6054,True
+318,"fire screen, fireguard","fire screen, fireguard",0.2591,True
+319,shower cap,shower cap,0.6516,True
+320,suspension bridge,suspension bridge,0.9837,True
+321,cassette player,cassette player,0.4529,True
+322,scabbard,scabbard,0.8479,True
+323,shopping basket,apron,0.3593,False
+324,space bar,monitor,0.2295,False
+325,soup bowl,soup bowl,0.3721,True
+326,"box turtle, box tortoise",terrapin,0.4523,False
+327,"china cabinet, china closet","gong, tam-tam",0.1156,False
+328,"upright, upright piano","upright, upright piano",0.7916,True
+329,"projectile, missile","projectile, missile",0.8177,True
+330,schooner,schooner,0.6124,True
+331,Bernese mountain dog,Bernese mountain dog,0.7804,True
+332,"disk brake, disc brake","disk brake, disc brake",0.7973,True
+333,"crossword puzzle, crossword","crossword puzzle, crossword",0.9840,True
+334,wombat,wombat,0.9856,True
+335,"loupe, jeweler's loupe","oscilloscope, scope, cathode-ray oscilloscope, CRO",0.1861,False
+336,"flute, transverse flute","flute, transverse flute",0.8541,True
+337,"Siamese cat, Siamese","Siamese cat, Siamese",0.9744,True
+338,window shade,window shade,0.5920,True
+339,"unicycle, monocycle","unicycle, monocycle",0.7760,True
+340,tarantula,tarantula,0.9351,True
+341,sombrero,sombrero,0.5052,True
+342,barbershop,barber chair,0.7100,False
+343,"snow leopard, ounce, Panthera uncia","snow leopard, ounce, Panthera uncia",0.9794,True
+344,trifle,trifle,0.9972,True
+345,"pot, flowerpot","artichoke, globe artichoke",0.1699,False
+346,steel arch bridge,steel arch bridge,0.5076,True
+347,"koala, koala bear, kangaroo bear, native bear, Phascolarctos cinereus","koala, koala bear, kangaroo bear, native bear, Phascolarctos cinereus",0.5429,True
+348,"ibex, Capra ibex",warthog,0.1937,False
+349,alligator lizard,"common newt, Triturus vulgaris",0.4792,False
+350,"garden spider, Aranea diademata","black and gold garden spider, Argiope aurantia",0.8862,False
+351,guillotine,guillotine,0.5363,True
+352,sleeping bag,apron,0.4206,False
+353,"remote control, remote","remote control, remote",0.2978,True
+354,Chesapeake Bay retriever,Chesapeake Bay retriever,0.7470,True
+355,fireboat,fireboat,0.9974,True
+356,Irish terrier,Irish terrier,0.3544,True
+357,beer bottle,beer bottle,0.8930,True
+358,iPod,iPod,0.9792,True
+359,"Komodo dragon, Komodo lizard, dragon lizard, giant lizard, Varanus komodoensis","Komodo dragon, Komodo lizard, dragon lizard, giant lizard, Varanus komodoensis",0.3535,True
+360,steam locomotive,steam locomotive,0.9403,True
+361,"capuchin, ringtail, Cebus capucinus","spider monkey, Ateles geoffroyi",0.1753,False
+362,vending machine,"gas pump, gasoline pump, petrol pump, island dispenser",0.1897,False
+363,"jean, blue jean, denim","suit, suit of clothes",0.5391,False
+364,marmoset,"fox squirrel, eastern fox squirrel, Sciurus niger",0.4440,False
+365,car wheel,car wheel,0.8877,True
+366,overskirt,overskirt,0.9420,True
+367,"fire screen, fireguard",window shade,0.7466,False
+368,"tiger, Panthera tigris","tiger, Panthera tigris",0.7487,True
+369,Siberian husky,Siberian husky,0.3760,True
+370,"hammerhead, hammerhead shark","tiger shark, Galeocerdo cuvieri",0.5397,False
+371,Irish water spaniel,"otterhound, otter hound",0.2905,False
+372,gyromitra,gyromitra,0.7808,True
+373,"French horn, horn","French horn, horn",0.7670,True
+374,Rottweiler,Rottweiler,0.8376,True
+375,half track,half track,0.8077,True
+376,"grille, radiator grille","grille, radiator grille",0.7252,True
+377,"bolo tie, bolo, bola tie, bola",hair slide,0.1723,False
+378,volcano,volcano,0.9753,True
+379,soup bowl,soup bowl,0.3043,True
+380,"gong, tam-tam","breastplate, aegis, egis",0.5677,False
+381,"perfume, essence","perfume, essence",0.7990,True
+382,"notebook, notebook computer","mouse, computer mouse",0.2047,False
+383,crane2,crane2,0.6009,True
+384,Chesapeake Bay retriever,Chesapeake Bay retriever,0.8565,True
+385,"basset, basset hound","Saint Bernard, St Bernard",0.2154,False
+386,"pay-phone, pay-station",barbershop,0.4177,False
+387,forklift,forklift,0.9205,True
+388,"lens cap, lens cover","lens cap, lens cover",0.9911,True
+389,badger,marmot,0.9351,False
+390,"iron, smoothing iron",stretcher,0.1300,False
+391,"echidna, spiny anteater, anteater","echidna, spiny anteater, anteater",0.6978,True
+392,trimaran,trimaran,0.8785,True
+393,"ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle","ladybug, ladybeetle, lady beetle, ladybird, ladybird beetle",0.8105,True
+394,toucan,toucan,0.8625,True
+395,macaque,macaque,0.2546,True
+396,toilet seat,ping-pong ball,0.1526,False
+397,"chime, bell, gong","bell cote, bell cot",0.7791,False
+398,window screen,window screen,0.9685,True
+399,"maze, labyrinth","maze, labyrinth",0.9139,True
+400,hammer,scabbard,0.3554,False
+401,black-and-tan coonhound,black-and-tan coonhound,0.3518,True
+402,bulbul,bulbul,0.8209,True
+403,"panpipe, pandean pipe, syrinx","harmonica, mouth organ, harp, mouth harp",0.3729,False
+404,spatula,mixing bowl,0.0810,False
+405,sombrero,sombrero,0.2821,True
+406,minibus,minibus,0.4899,True
+407,"candle, taper, wax light","candle, taper, wax light",0.1287,True
+408,"beacon, lighthouse, beacon light, pharos",alp,0.3404,False
+409,"pineapple, ananas","pineapple, ananas",0.4414,True
+410,Brabancon griffon,Brabancon griffon,0.8936,True
+411,briard,briard,0.1943,True
+412,"television, television system",table lamp,0.4481,False
+413,"seashore, coast, seacoast, sea-coast","seashore, coast, seacoast, sea-coast",0.9338,True
+414,fireboat,fireboat,0.8836,True
+415,"pickup, pickup truck","pickup, pickup truck",0.7483,True
+416,"panpipe, pandean pipe, syrinx","gong, tam-tam",0.2073,False
+417,"crayfish, crawfish, crawdad, crawdaddy","American lobster, Northern lobster, Maine lobster, Homarus americanus",0.5238,False
+418,wine bottle,"chocolate sauce, chocolate syrup",0.2332,False
+419,combination lock,combination lock,0.2475,True
+420,"timber wolf, grey wolf, gray wolf, Canis lupus","timber wolf, grey wolf, gray wolf, Canis lupus",0.4613,True
+421,strainer,combination lock,0.3459,False
+422,Blenheim spaniel,Japanese spaniel,0.6362,False
+423,"greenhouse, nursery, glasshouse","greenhouse, nursery, glasshouse",0.9369,True
+424,electric guitar,electric guitar,0.9553,True
+425,"affenpinscher, monkey pinscher, monkey dog",miniature schnauzer,0.5372,False
+426,"hoopskirt, crinoline",overskirt,0.2716,False
+427,wire-haired fox terrier,"Sealyham terrier, Sealyham",0.2975,False
+428,"colobus, colobus monkey",jacamar,0.0967,False
+429,trombone,"sax, saxophone",0.3099,False
+430,"ringlet, ringlet butterfly","ringlet, ringlet butterfly",0.9628,True
+431,toucan,toucan,0.6389,True
+432,"limpkin, Aramus pictus","limpkin, Aramus pictus",0.9989,True
+433,pier,suspension bridge,0.3506,False
+434,"dragonfly, darning needle, devil's darning needle, sewing needle, snake feeder, snake doctor, mosquito hawk, skeeter hawk",damselfly,0.6973,False
+435,Brittany spaniel,English foxhound,0.2064,False
+436,"grey fox, gray fox, Urocyon cinereoargenteus","grey fox, gray fox, Urocyon cinereoargenteus",0.9192,True
+437,"oystercatcher, oyster catcher","oystercatcher, oyster catcher",0.6773,True
+438,"vacuum, vacuum cleaner","hand blower, blow dryer, blow drier, hair dryer, hair drier",0.6481,False
+439,oxygen mask,stretcher,0.5292,False
+440,tiger beetle,tiger beetle,0.9910,True
+441,boxer,boxer,0.3520,True
+442,"lipstick, lip rouge","lipstick, lip rouge",0.5522,True
+443,manhole cover,manhole cover,0.9941,True
+444,"gong, tam-tam","gong, tam-tam",0.8925,True
+445,plastic bag,bib,0.2138,False
+446,Greater Swiss Mountain dog,Greater Swiss Mountain dog,0.5448,True
+447,"cheetah, chetah, Acinonyx jubatus","cougar, puma, catamount, mountain lion, painter, panther, Felis concolor",0.5481,False
+448,trombone,trombone,0.2259,True
+449,"Norwegian elkhound, elkhound","Norwegian elkhound, elkhound",0.9466,True
+450,viaduct,steel arch bridge,0.5941,False
+451,"guinea pig, Cavia cobaya","guinea pig, Cavia cobaya",0.6601,True
+452,"rock beauty, Holocanthus tricolor",snorkel,0.3608,False
+453,maraca,maraca,0.9701,True
+454,"great grey owl, great gray owl, Strix nebulosa","great grey owl, great gray owl, Strix nebulosa",0.9975,True
+455,"American Staffordshire terrier, Staffordshire terrier, American pit bull terrier, pit bull terrier","Staffordshire bullterrier, Staffordshire bull terrier",0.5179,False
+456,palace,palace,0.8366,True
+457,"African grey, African gray, Psittacus erithacus","African grey, African gray, Psittacus erithacus",0.8739,True
+458,"plane, carpenter's plane, woodworking plane","clog, geta, patten, sabot",0.2165,False
+459,"goldfish, Carassius auratus","goldfish, Carassius auratus",0.8592,True
+460,"timber wolf, grey wolf, gray wolf, Canis lupus","timber wolf, grey wolf, gray wolf, Canis lupus",0.4910,True
+461,envelope,"binder, ring-binder",0.4968,False
+462,shopping basket,shopping cart,0.8410,False
+463,freight car,freight car,0.6552,True
+464,reel,sewing machine,0.2031,False
+465,"spider monkey, Ateles geoffroyi","guenon, guenon monkey",0.4622,False
+466,acoustic guitar,acoustic guitar,0.7819,True
+467,"bucket, pail","bucket, pail",0.3610,True
+468,potpie,potpie,0.8339,True
+469,"bagel, beigel",French loaf,0.3305,False
+470,isopod,cricket,0.2582,False
+471,beaker,beaker,0.5332,True
+472,"Lhasa, Lhasa apso","Sealyham terrier, Sealyham",0.3939,False
+473,toucan,toucan,0.9347,True
+474,croquet ball,croquet ball,0.8731,True
+475,"hip, rose hip, rosehip","hip, rose hip, rosehip",0.7026,True
+476,four-poster,plate rack,0.2465,False
+477,trombone,"sax, saxophone",0.2476,False
+478,bottlecap,"medicine chest, medicine cabinet",0.4032,False
+479,"lampshade, lamp shade","gong, tam-tam",0.1684,False
+480,"bakery, bakeshop, bakehouse",fig,0.1651,False
+481,window shade,"dining table, board",0.6005,False
+482,"drum, membranophone, tympan","drum, membranophone, tympan",0.1200,True
+483,Bedlington terrier,standard poodle,0.5055,False
+484,spaghetti squash,spaghetti squash,0.7989,True
+485,"ear, spike, capitulum",corn,0.7748,False
+486,cassette player,tape player,0.4388,False
+487,shopping cart,"grocery store, grocery, food market, market",0.5507,False
+488,macaque,macaque,0.4388,True
+489,"coyote, prairie wolf, brush wolf, Canis latrans","red wolf, maned wolf, Canis rufus, Canis niger",0.5127,False
+490,sock,sock,0.8084,True
+491,"letter opener, paper knife, paperknife","letter opener, paper knife, paperknife",0.9264,True
+492,"chain mail, ring mail, mail, chain armor, chain armour, ring armor, ring armour","chain mail, ring mail, mail, chain armor, chain armour, ring armor, ring armour",0.8382,True
+493,"grasshopper, hopper","grasshopper, hopper",0.4849,True
+494,trombone,trombone,0.6250,True
+495,mink,mink,0.7093,True
+496,"harvester, reaper","harvester, reaper",0.9022,True
+497,standard poodle,standard poodle,0.4513,True
+498,"cowboy hat, ten-gallon hat","cowboy hat, ten-gallon hat",0.4654,True
+499,"beacon, lighthouse, beacon light, pharos","beacon, lighthouse, beacon light, pharos",0.6569,True

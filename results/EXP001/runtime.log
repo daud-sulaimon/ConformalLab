@@ -1,0 +1,14 @@
+2026-08-05 21:52:51,296 | INFO     | conformallab.src.utils.config | Loaded configuration 'EXP001' from configs\default.yaml
+2026-08-05 21:52:51,312 | INFO     | conformallab.src.utils.seed | Random seed set to 42 (Python, NumPy, PyTorch, CUDA).
+2026-08-05 21:52:51,312 | INFO     | conformallab.__main__ | Starting experiment 'EXP001'
+2026-08-05 21:52:51,312 | INFO     | conformallab.src.models.manager | Constructing model 'clip' (CLIPModel)
+2026-08-05 21:52:51,312 | INFO     | conformallab.src.models.clip_model | Loading CLIP (ViT-B-32-quickgelu, pretrained=openai) on device 'cpu'...
+2026-08-05 21:52:53,067 | INFO     | conformallab.src.models.clip_model | CLIP loaded successfully.
+2026-08-05 21:52:53,073 | INFO     | conformallab.src.datasets.manager | Constructing dataset 'imagenet' (ImageNetDataset)
+2026-08-05 21:52:53,074 | INFO     | conformallab.src.datasets.imagenet | Streaming 1000 images from ILSVRC/imagenet-1k (validation split)...
+2026-08-05 21:54:51,773 | INFO     | conformallab.src.datasets.imagenet | Loaded 500 calibration images and 500 test images.
+2026-08-05 21:54:51,773 | INFO     | conformallab.src.embeddings.extractor | Using cached embeddings for 'clip_imagenet_calibration'.
+2026-08-05 21:54:51,773 | INFO     | conformallab.src.embeddings.cache | Loaded cached embeddings 'clip_imagenet_calibration': shape=(500, 512)
+2026-08-05 21:54:51,789 | INFO     | conformallab.src.embeddings.extractor | Using cached embeddings for 'clip_imagenet_test'.
+2026-08-05 21:54:51,798 | INFO     | conformallab.src.embeddings.cache | Loaded cached embeddings 'clip_imagenet_test': shape=(500, 512)
+2026-08-05 21:55:14,242 | INFO     | conformallab.__main__ | Experiment 'EXP001' complete: top1=0.5700, top5=0.8580, runtime=142.9s
