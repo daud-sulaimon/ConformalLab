@@ -117,6 +117,12 @@ class CLIPModel(BaseModel):
         self._require_loaded()
         return self._preprocess
 
+    @property
+    def logit_scale(self) -> float:
+        """CLIP's learned temperature parameter, exponentiated."""
+        self._require_loaded()
+        return self._model.logit_scale.exp().item()
+
     @torch.no_grad()
     def encode_images(self, images: torch.Tensor) -> torch.Tensor:
         self._require_loaded()

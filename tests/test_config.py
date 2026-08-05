@@ -79,3 +79,18 @@ def test_malformed_yaml_raises(tmp_path):
     path = _write(tmp_path, "experiment: [unclosed")
     with pytest.raises(ConfigError):
         load_config(path)
+
+
+def test_dataset_subset_size_defaults_to_1000(tmp_path):
+    path = _write(tmp_path, VALID_YAML)
+    config = load_config(path)
+    assert config.dataset.subset_size == 1000
+
+
+def test_dataset_subset_size_can_be_overridden(tmp_path):
+    custom_yaml = VALID_YAML.replace(
+        "name: imagenet\n", "name: imagenet\n  subset_size: 500\n"
+    )
+    path = _write(tmp_path, custom_yaml)
+    config = load_config(path)
+    assert config.dataset.subset_size == 500

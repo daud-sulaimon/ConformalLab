@@ -6,6 +6,7 @@ model:
 
 dataset:
   name: imagenet
+  subset_size: 1000
 
 calibration:
   alpha: 0.1

@@ -41,6 +41,7 @@ class ModelConfig:
 @dataclass(frozen=True)
 class DatasetConfig:
     name: str
+    subset_size: int = 1000
 
 
 @dataclass(frozen=True)
@@ -132,6 +133,12 @@ def load_config(path: Union[str, Path]) -> Config:
             f"Unknown dataset '{dataset_name}'. Must be one of {sorted(_VALID_DATASETS)}."
         )
 
+    subset_size = raw["dataset"].get("subset_size", 1000)
+    if not isinstance(subset_size, int) or isinstance(subset_size, bool) or subset_size <= 0:
+        raise ConfigError(
+            f"'dataset.subset_size' must be a positive integer, got {subset_size!r}."
+        )
+
     alpha = raw["calibration"]["alpha"]
     if not isinstance(alpha, (int, float)) or isinstance(alpha, bool) or not (0 < alpha < 1):
         raise ConfigError(
@@ -145,7 +152,7 @@ def load_config(path: Union[str, Path]) -> Config:
     config = Config(
         experiment=ExperimentConfig(id=str(raw["experiment"]["id"])),
         model=ModelConfig(name=model_name),
-        dataset=DatasetConfig(name=dataset_name),
+        dataset=DatasetConfig(name=dataset_name, subset_size=subset_size),
         calibration=CalibrationConfig(alpha=float(alpha)),
         seed=SeedConfig(value=seed_value),
     )
