@@ -1,0 +1,7 @@
+{
+  "method": "SplitCP",
+  "target_coverage": 0.9,
+  "empirical_coverage": 0.924,
+  "average_set_size": 6.824,
+  "num_samples": 500
+}

@@ -13,6 +13,8 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
+from pathlib import Path
 
 import numpy as np
 
@@ -47,13 +49,13 @@ def main() -> None:
     model = ModelManager(config.model.name)
     model.load()
 
-    class_names = DatasetManager(
+    class_names_dataset = DatasetManager(
         config.dataset.name, subset_size=1, transform=model.preprocess
     )
     # Only need class_names here, not real images - a tiny subset_size
     # avoids re-streaming the full dataset just to read the label list.
-    class_names.load()
-    class_names = class_names.class_names()
+    class_names_dataset.load()
+    class_names = class_names_dataset.class_names()
 
     text_embeddings = model.encode_text(class_names).cpu().numpy()
 
@@ -75,6 +77,13 @@ def main() -> None:
     print("\n--- Split CP Coverage Report ---")
     for key, value in report.items():
         print(f"{key}: {value}")
+
+    output_dir = Path("results") / config.experiment.id
+    output_dir.mkdir(parents=True, exist_ok=True)
+    with open(output_dir / "coverage.json", "w", encoding="utf-8") as f:
+        json.dump({"method": "SplitCP", **report}, f, indent=2)
+
+    logger.info(f"Coverage report archived to {output_dir / 'coverage.json'}")
 
 
 if __name__ == "__main__":
