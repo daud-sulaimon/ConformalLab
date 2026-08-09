@@ -20,7 +20,7 @@ import numpy as np
 import src.datasets.imagenet  # noqa: F401  (registers ImageNetDataset)
 import src.datasets.imagenet_v2  # noqa: F401  (registers ImageNetV2Dataset)
 import src.models.clip_model  # noqa: F401  (registers CLIPModel)
-from src.datasets.imagenet import ImageNetDataset
+from src.datasets.imagenet_class_names import load_imagenet_class_names
 from src.datasets.manager import DatasetManager
 from src.embeddings.cache import EmbeddingCache
 from src.metrics.coverage import coverage_report
@@ -86,13 +86,7 @@ def main() -> None:
     model = ModelManager(config.model.name)
     model.load()
 
-    # Class names come from ImageNet (the calibration dataset) - the
-    # shift dataset itself has no class-name source of its own, and
-    # its label indices are defined to match this same ordering.
-    imagenet_dataset = ImageNetDataset(subset_size=1, transform=model.preprocess)
-    imagenet_dataset.load()
-    class_names = imagenet_dataset.class_names()
-
+    class_names = load_imagenet_class_names()
     text_embeddings = model.encode_text(class_names).cpu().numpy()
 
     shift_dataset = DatasetManager(

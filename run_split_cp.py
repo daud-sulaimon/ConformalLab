@@ -23,7 +23,7 @@ import numpy as np
 import src.datasets.imagenet  # noqa: F401  (registers ImageNetDataset)
 import src.models.clip_model  # noqa: F401  (registers CLIPModel)
 from src.conformal.split_cp import SplitConformalMethod
-from src.datasets.manager import DatasetManager
+from src.datasets.imagenet_class_names import load_imagenet_class_names
 from src.embeddings.cache import EmbeddingCache
 from src.metrics.coverage import coverage_report
 from src.models.manager import ModelManager
@@ -51,14 +51,7 @@ def main() -> None:
     model = ModelManager(config.model.name)
     model.load()
 
-    class_names_dataset = DatasetManager(
-        config.dataset.name, subset_size=1, transform=model.preprocess
-    )
-    # Only need class_names here, not real images - a tiny subset_size
-    # avoids re-streaming the full dataset just to read the label list.
-    class_names_dataset.load()
-    class_names = class_names_dataset.class_names()
-
+    class_names = load_imagenet_class_names()
     text_embeddings = model.encode_text(class_names).cpu().numpy()
 
     cache = EmbeddingCache()
