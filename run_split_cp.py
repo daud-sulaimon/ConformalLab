@@ -3,8 +3,10 @@ Run Split Conformal Prediction on cached EXP001 embeddings.
 
 Loads the calibration and test embeddings already extracted and
 cached by run.py (EXP001), reconstructs class probabilities using
-CLIP's text embeddings and logit scale, calibrates Split CP, and
-reports empirical coverage against the target from configs/default.yaml.
+CLIP's text embeddings and logit scale, calibrates Split CP, reports
+empirical coverage against the target from configs/default.yaml, and
+freezes the calibration threshold (q_hat) to disk so it can be reused
+unchanged by run_shift_eval.py on distribution-shift datasets.
 
 Usage:
     python run_split_cp.py --config configs/default.yaml
@@ -80,10 +82,16 @@ def main() -> None:
 
     output_dir = Path("results") / config.experiment.id
     output_dir.mkdir(parents=True, exist_ok=True)
+
     with open(output_dir / "coverage.json", "w", encoding="utf-8") as f:
         json.dump({"method": "SplitCP", **report}, f, indent=2)
 
+    threshold_path = output_dir / "split_cp_threshold.json"
+    with open(threshold_path, "w", encoding="utf-8") as f:
+        json.dump({"alpha": config.calibration.alpha, "q_hat": method.q_hat}, f, indent=2)
+
     logger.info(f"Coverage report archived to {output_dir / 'coverage.json'}")
+    logger.info(f"Calibration threshold frozen and archived to {threshold_path}")
 
 
 if __name__ == "__main__":

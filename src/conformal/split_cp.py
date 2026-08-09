@@ -50,6 +50,15 @@ class SplitConformalMethod(BaseConformalMethod):
         self._alpha = alpha
         self._q_hat: Optional[float] = None
 
+    @property
+    def q_hat(self) -> float:
+        """The calibrated threshold. Raises if calibrate() hasn't been called."""
+        if self._q_hat is None:
+            raise RuntimeError(
+                "SplitConformalMethod.calibrate() must be called before accessing q_hat."
+            )
+        return self._q_hat
+
     def calibrate(self, calibration_probs: np.ndarray, calibration_labels: np.ndarray) -> None:
         """
         Compute the calibration threshold q_hat from calibration data.
