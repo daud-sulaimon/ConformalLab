@@ -1,0 +1,9 @@
+{
+  "method": "SplitCP",
+  "dataset": "imagenet_r",
+  "target_coverage": 0.9,
+  "empirical_coverage": 0.878,
+  "average_set_size": 7.152,
+  "num_samples": 1000,
+  "num_classes_evaluated": 200
+}
