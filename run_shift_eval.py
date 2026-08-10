@@ -7,16 +7,18 @@ observed reflects the shift itself, not a different calibration.
 
 Text embeddings (and therefore the softmax probability space) are
 built from the shift dataset's OWN class_names() — not always the
-full 1000-class ImageNet list — since some shift datasets (ImageNet-R)
-restrict evaluation to a subset of classes, following standard
-practice in the calibration/robustness literature (Hendrycks et al.).
-Restricting the class space before softmax (not after) is essential:
-softmax is not linear, so computing it over the full 1000 classes and
-discarding irrelevant ones afterward would corrupt the probabilities.
+full 1000-class ImageNet list — since some shift datasets (ImageNet-R,
+ImageNet-A) restrict evaluation to a subset of classes, following
+standard practice in the calibration/robustness literature (Hendrycks
+et al.). Restricting the class space before softmax (not after) is
+essential: softmax is not linear, so computing it over the full 1000
+classes and discarding irrelevant ones afterward would corrupt the
+probabilities.
 
 Usage:
     python run_shift_eval.py --config configs/default.yaml --dataset imagenet_v2
     python run_shift_eval.py --config configs/default.yaml --dataset imagenet_r
+    python run_shift_eval.py --config configs/default.yaml --dataset imagenet_a
 """
 
 from __future__ import annotations
@@ -28,6 +30,7 @@ from pathlib import Path
 import numpy as np
 
 import src.datasets.imagenet  # noqa: F401  (registers ImageNetDataset)
+import src.datasets.imagenet_a  # noqa: F401  (registers ImageNetADataset)
 import src.datasets.imagenet_r  # noqa: F401  (registers ImageNetRDataset)
 import src.datasets.imagenet_v2  # noqa: F401  (registers ImageNetV2Dataset)
 import src.models.clip_model  # noqa: F401  (registers CLIPModel)
@@ -47,6 +50,7 @@ logger = get_logger(__name__)
 _SHIFT_EXPERIMENT_IDS = {
     "imagenet_v2": "EXP002",
     "imagenet_r": "EXP003",
+    "imagenet_a": "EXP004",
 }
 
 
@@ -97,11 +101,6 @@ def main() -> None:
     model = ModelManager(config.model.name)
     model.load()
 
-    # The full 1000-class ImageNet list is passed to every shift
-    # dataset constructor - some (ImageNetV2Dataset) use it as-is,
-    # others (ImageNetRDataset) use it to look up names for their own
-    # restricted subset. Either way, we read the ACTIVE class list
-    # back from the dataset itself after load(), not assume it here.
     full_class_names = load_imagenet_class_names()
 
     shift_dataset = DatasetManager(
@@ -112,10 +111,6 @@ def main() -> None:
     )
     shift_dataset.load()
 
-    # This is the key fix: encode text embeddings from the dataset's
-    # OWN active class list (200 for ImageNet-R, 1000 for ImageNet-V2),
-    # so softmax is computed over the correct, literature-standard
-    # class space - not always the full 1000.
     active_class_names = shift_dataset.class_names()
     text_embeddings = model.encode_text(active_class_names).cpu().numpy()
 
