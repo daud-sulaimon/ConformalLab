@@ -1,0 +1,7 @@
+{
+  "method": "raps",
+  "target_coverage": 0.9,
+  "empirical_coverage": 0.94,
+  "average_set_size": 11.062,
+  "num_samples": 500
+}

@@ -1,5 +1,4 @@
 """
-"""
 Run a chosen conformal method (LAC/APS/RAPS) on cached EXP001 embeddings.
 
 Loads the calibration and test embeddings already extracted and

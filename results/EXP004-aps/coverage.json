@@ -1,0 +1,9 @@
+{
+  "method": "aps",
+  "dataset": "imagenet_a",
+  "target_coverage": 0.9,
+  "empirical_coverage": 0.931,
+  "average_set_size": 42.575,
+  "num_samples": 1000,
+  "num_classes_evaluated": 200
+}

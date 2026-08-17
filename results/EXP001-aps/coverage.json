@@ -1,0 +1,7 @@
+{
+  "method": "aps",
+  "target_coverage": 0.9,
+  "empirical_coverage": 0.988,
+  "average_set_size": 70.506,
+  "num_samples": 500
+}

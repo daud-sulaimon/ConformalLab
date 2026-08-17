@@ -1,0 +1,9 @@
+{
+  "method": "raps",
+  "dataset": "imagenet_a",
+  "target_coverage": 0.9,
+  "empirical_coverage": 0.798,
+  "average_set_size": 12.605,
+  "num_samples": 1000,
+  "num_classes_evaluated": 200
+}
