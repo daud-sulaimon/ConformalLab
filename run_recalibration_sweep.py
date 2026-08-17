@@ -35,9 +35,7 @@ from pathlib import Path
 
 import numpy as np
 
-from src.conformal.aps import APSConformalMethod
-from src.conformal.raps import RAPSConformalMethod
-from src.conformal.split_cp import SplitConformalMethod
+from src.conformal.factory import METHOD_CLASSES as _METHOD_CLASSES
 from src.embeddings.cache import EmbeddingCache
 from src.metrics.coverage import coverage_report
 from src.utils.config import load_config
@@ -50,12 +48,6 @@ _N_BUDGETS = [10, 25, 50, 100, 250]
 _NUM_DRAWS = 20
 _RECAL_POOL_SIZE = 500
 _EVAL_SET_SIZE = 500
-
-_METHOD_CLASSES = {
-    "lac": SplitConformalMethod,
-    "aps": APSConformalMethod,
-    "raps": RAPSConformalMethod,
-}
 
 
 def _softmax(x: np.ndarray) -> np.ndarray:

@@ -1,15 +1,19 @@
 """
-Run Split Conformal Prediction on cached EXP001 embeddings.
+"""
+Run a chosen conformal method (LAC/APS/RAPS) on cached EXP001 embeddings.
 
 Loads the calibration and test embeddings already extracted and
 cached by run.py (EXP001), reconstructs class probabilities using
-CLIP's text embeddings and logit scale, calibrates Split CP, reports
-empirical coverage against the target from configs/default.yaml, and
-freezes the calibration threshold (q_hat) to disk so it can be reused
-unchanged by run_shift_eval.py on distribution-shift datasets.
+CLIP's text embeddings and logit scale, calibrates the chosen method,
+reports empirical coverage against the target from
+configs/default.yaml, and freezes the calibration threshold (q_hat)
+to disk so it can be reused unchanged by run_shift_eval.py on
+distribution-shift datasets.
 
 Usage:
-    python run_split_cp.py --config configs/default.yaml
+    python run_split_cp.py --config configs/default.yaml --method lac
+    python run_split_cp.py --config configs/default.yaml --method aps
+    python run_split_cp.py --config configs/default.yaml --method raps
 """
 
 from __future__ import annotations
@@ -22,7 +26,7 @@ import numpy as np
 
 import src.datasets.imagenet  # noqa: F401  (registers ImageNetDataset)
 import src.models.clip_model  # noqa: F401  (registers CLIPModel)
-from src.conformal.split_cp import SplitConformalMethod
+from src.conformal.factory import create_conformal_method
 from src.datasets.imagenet_class_names import load_imagenet_class_names
 from src.embeddings.cache import EmbeddingCache
 from src.metrics.coverage import coverage_report
@@ -40,8 +44,13 @@ def _softmax(x: np.ndarray) -> np.ndarray:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run Split CP on cached EXP001 embeddings.")
+    parser = argparse.ArgumentParser(
+        description="Run a conformal method on cached EXP001 embeddings."
+    )
     parser.add_argument("--config", type=str, required=True)
+    parser.add_argument(
+        "--method", type=str, required=True, choices=["lac", "aps", "raps"]
+    )
     args = parser.parse_args()
 
     configure_logging()
@@ -63,23 +72,23 @@ def main() -> None:
     calibration_probs = _softmax(model.logit_scale * (calibration_embeddings @ text_embeddings.T))
     test_probs = _softmax(model.logit_scale * (test_embeddings @ text_embeddings.T))
 
-    method = SplitConformalMethod(alpha=config.calibration.alpha)
+    method = create_conformal_method(args.method, alpha=config.calibration.alpha)
     method.calibrate(calibration_probs, calibration_labels)
     prediction_sets = method.predict_sets(test_probs)
 
     report = coverage_report(prediction_sets, test_labels, alpha=config.calibration.alpha)
 
-    print("\n--- Split CP Coverage Report ---")
+    print(f"\n--- {args.method.upper()} Coverage Report ---")
     for key, value in report.items():
         print(f"{key}: {value}")
 
-    output_dir = Path("results") / config.experiment.id
+    output_dir = Path("results") / f"{config.experiment.id}-{args.method}"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     with open(output_dir / "coverage.json", "w", encoding="utf-8") as f:
-        json.dump({"method": "SplitCP", **report}, f, indent=2)
+        json.dump({"method": args.method, **report}, f, indent=2)
 
-    threshold_path = output_dir / "split_cp_threshold.json"
+    threshold_path = output_dir / "threshold.json"
     with open(threshold_path, "w", encoding="utf-8") as f:
         json.dump({"alpha": config.calibration.alpha, "q_hat": method.q_hat}, f, indent=2)
 
