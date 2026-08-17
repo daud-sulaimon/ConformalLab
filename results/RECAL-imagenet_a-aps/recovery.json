@@ -1,0 +1,46 @@
+{
+  "dataset": "imagenet_a",
+  "method": "aps",
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "recal_pool_size": 500,
+  "eval_set_size": 500,
+  "num_draws": 20,
+  "results_by_n": {
+    "10": {
+      "coverage_mean": 0.937,
+      "coverage_std": 0.04532328319969769,
+      "set_size_mean": 58.89519999999999,
+      "set_size_std": 21.114898885857826,
+      "num_draws": 20
+    },
+    "25": {
+      "coverage_mean": 0.9436,
+      "coverage_std": 0.02560156245231917,
+      "set_size_mean": 59.26519999999998,
+      "set_size_std": 21.63555456557562,
+      "num_draws": 20
+    },
+    "50": {
+      "coverage_mean": 0.9161999999999999,
+      "coverage_std": 0.026091377886190675,
+      "set_size_mean": 42.803799999999995,
+      "set_size_std": 9.539574579613076,
+      "num_draws": 20
+    },
+    "100": {
+      "coverage_mean": 0.9087,
+      "coverage_std": 0.024537929823031122,
+      "set_size_mean": 40.0723,
+      "set_size_std": 8.599730862649132,
+      "num_draws": 20
+    },
+    "250": {
+      "coverage_mean": 0.9085999999999999,
+      "coverage_std": 0.011867602959317448,
+      "set_size_mean": 38.328599999999994,
+      "set_size_std": 3.4332606717230187,
+      "num_draws": 20
+    }
+  }
+}

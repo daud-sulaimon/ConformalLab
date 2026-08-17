@@ -1,0 +1,46 @@
+{
+  "dataset": "imagenet_r",
+  "method": "lac",
+  "alpha": 0.1,
+  "target_coverage": 0.9,
+  "recal_pool_size": 500,
+  "eval_set_size": 500,
+  "num_draws": 20,
+  "results_by_n": {
+    "10": {
+      "coverage_mean": 0.9422,
+      "coverage_std": 0.07150636335320093,
+      "set_size_mean": 43.8369,
+      "set_size_std": 45.75439194427132,
+      "num_draws": 20
+    },
+    "25": {
+      "coverage_mean": 0.9674000000000001,
+      "coverage_std": 0.02825668062600418,
+      "set_size_mean": 42.4563,
+      "set_size_std": 28.65644858858125,
+      "num_draws": 20
+    },
+    "50": {
+      "coverage_mean": 0.9170000000000001,
+      "coverage_std": 0.031378336475982906,
+      "set_size_mean": 14.258399999999998,
+      "set_size_std": 8.886686842687775,
+      "num_draws": 20
+    },
+    "100": {
+      "coverage_mean": 0.9101000000000001,
+      "coverage_std": 0.02328497369549727,
+      "set_size_mean": 11.696299999999999,
+      "set_size_std": 5.884723180405344,
+      "num_draws": 20
+    },
+    "250": {
+      "coverage_mean": 0.9108,
+      "coverage_std": 0.011872657663724674,
+      "set_size_mean": 10.7447,
+      "set_size_std": 2.1777085456966003,
+      "num_draws": 20
+    }
+  }
+}
