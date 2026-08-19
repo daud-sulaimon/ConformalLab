@@ -102,6 +102,7 @@ class ImageNetRDataset(BaseDataset):
             f"{_HF_DATASET_NAME} ({_HF_SPLIT} split)..."
         )
 
+        stream = load_dataset(_HF_DATASET_NAME, split=_HF_SPLIT, streaming=True)
         stream = stream.shuffle(seed=self._seed, buffer_size=50000)
 
         # `cls` from the stream is already the local 0-199 index this
