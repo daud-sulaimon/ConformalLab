@@ -3,7 +3,7 @@
   "dataset": "imagenet_v2",
   "target_coverage": 0.9,
   "empirical_coverage": 0.974,
-  "average_set_size": 88.222,
+  "average_set_size": 87.979,
   "num_samples": 1000,
   "num_classes_evaluated": 1000
 }
