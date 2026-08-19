@@ -8,38 +8,38 @@
   "num_draws": 20,
   "results_by_n": {
     "10": {
-      "coverage_mean": 0.9724,
-      "coverage_std": 0.02402998127340094,
-      "set_size_mean": 59.78830000000001,
-      "set_size_std": 43.656960151962025,
+      "coverage_mean": 0.9821999999999997,
+      "coverage_std": 0.017548789132017073,
+      "set_size_mean": 42.9158,
+      "set_size_std": 16.851908733434325,
       "num_draws": 20
     },
     "25": {
-      "coverage_mean": 0.982,
-      "coverage_std": 0.016887865466067634,
-      "set_size_mean": 60.737300000000005,
-      "set_size_std": 24.8765685035135,
+      "coverage_mean": 0.9901,
+      "coverage_std": 0.008061637550770941,
+      "set_size_mean": 60.28959999999999,
+      "set_size_std": 32.10470970807866,
       "num_draws": 20
     },
     "50": {
-      "coverage_mean": 0.9656,
-      "coverage_std": 0.01997598558269403,
-      "set_size_mean": 38.2398,
-      "set_size_std": 11.347295817065843,
+      "coverage_mean": 0.9865999999999998,
+      "coverage_std": 0.007722693830523136,
+      "set_size_mean": 41.91180000000001,
+      "set_size_std": 13.350000897378244,
       "num_draws": 20
     },
     "100": {
-      "coverage_mean": 0.9662,
-      "coverage_std": 0.013159027319676778,
-      "set_size_mean": 35.071600000000004,
-      "set_size_std": 5.2241157950413,
+      "coverage_mean": 0.9849,
+      "coverage_std": 0.0029983328701129928,
+      "set_size_mean": 38.13629999999999,
+      "set_size_std": 6.077708952393162,
       "num_draws": 20
     },
     "250": {
-      "coverage_mean": 0.9642,
-      "coverage_std": 0.006539113089708732,
-      "set_size_mean": 32.6785,
-      "set_size_std": 2.4237734114392797,
+      "coverage_mean": 0.9852000000000002,
+      "coverage_std": 0.001720465053408527,
+      "set_size_mean": 34.626000000000005,
+      "set_size_std": 2.429942221535318,
       "num_draws": 20
     }
   }
