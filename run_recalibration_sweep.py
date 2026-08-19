@@ -19,8 +19,21 @@ samples are drawn from the recalibration pool (without replacement
 within each draw; draws are independent of each other), the method is
 freshly calibrated on each sample (never reusing the frozen ImageNet
 threshold), and coverage/set size are measured on the fixed evaluation
-set. Results are reported as mean +/- standard deviation across the 20
-draws per N.
+set. Both summary statistics (mean/std) AND the raw per-draw values
+are saved - the raw values are required for any downstream
+distributional analysis (e.g. comparison against the theoretical
+Beta-distributed calibration-conditional coverage reference), which
+cannot be done from summary statistics alone.
+
+Note on independence: all 20 draws at a given N share the SAME fixed
+500-example evaluation set. This means the 20 coverage observations
+are not fully independent samples of the unconditional coverage
+distribution - they are repeated measurements against one fixed
+target. Any distributional comparison using these raw draws (e.g. a
+KS test against the theoretical Beta reference) must treat this as a
+descriptive comparison, not a formal independence-assuming hypothesis
+test. See the analysis script and dissertation Methodology section for
+the full caveat.
 
 Usage:
     python run_recalibration_sweep.py --dataset imagenet_r --method aps
@@ -163,6 +176,8 @@ def _run_sweep_for_dataset(
             "coverage_std": float(np.std(draw_coverages)),
             "set_size_mean": float(np.mean(draw_set_sizes)),
             "set_size_std": float(np.std(draw_set_sizes)),
+            "coverage_draws": [float(c) for c in draw_coverages],
+            "set_size_draws": [float(s) for s in draw_set_sizes],
             "num_draws": _NUM_DRAWS,
         }
 

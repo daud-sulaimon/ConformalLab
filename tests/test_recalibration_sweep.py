@@ -2,6 +2,7 @@
 synthetic data (no cached embeddings or network required)."""
 
 import numpy as np
+import pytest
 
 from run_recalibration_sweep import _run_sweep_for_dataset
 
@@ -55,3 +56,14 @@ def test_larger_n_generally_reduces_variance():
     std_at_10 = results[10]["coverage_std"]
     std_at_250 = results[250]["coverage_std"]
     assert std_at_250 <= std_at_10
+
+
+def test_sweep_stores_raw_per_draw_data():
+    probs, labels = _make_synthetic_probs_and_labels(n=1000)
+    results = _run_sweep_for_dataset(probs, labels, method_name="lac", alpha=0.1, seed=42)
+
+    for n, r in results.items():
+        assert len(r["coverage_draws"]) == 20
+        assert len(r["set_size_draws"]) == 20
+        assert r["coverage_mean"] == pytest.approx(np.mean(r["coverage_draws"]))
+        assert r["coverage_std"] == pytest.approx(np.std(r["coverage_draws"]))
