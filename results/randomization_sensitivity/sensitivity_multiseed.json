@@ -1,0 +1,194 @@
+[
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "randomize": false,
+    "seed": null,
+    "coverage": 0.975,
+    "avg_set_size": 31.868
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "randomize": false,
+    "seed": null,
+    "coverage": 0.901,
+    "avg_set_size": 44.941
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "randomize": true,
+    "seed": 0,
+    "coverage": 0.913,
+    "avg_set_size": 10.825
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "randomize": true,
+    "seed": 1,
+    "coverage": 0.921,
+    "avg_set_size": 11.772
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "randomize": true,
+    "seed": 2,
+    "coverage": 0.911,
+    "avg_set_size": 11.333
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "randomize": true,
+    "seed": 3,
+    "coverage": 0.904,
+    "avg_set_size": 10.23
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "randomize": true,
+    "seed": 4,
+    "coverage": 0.919,
+    "avg_set_size": 12.353
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "randomize": true,
+    "seed": 0,
+    "coverage": 0.704,
+    "avg_set_size": 15.413
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "randomize": true,
+    "seed": 1,
+    "coverage": 0.728,
+    "avg_set_size": 16.798
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "randomize": true,
+    "seed": 2,
+    "coverage": 0.723,
+    "avg_set_size": 16.154
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "randomize": true,
+    "seed": 3,
+    "coverage": 0.693,
+    "avg_set_size": 14.507
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "randomize": true,
+    "seed": 4,
+    "coverage": 0.741,
+    "avg_set_size": 17.655
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "randomize": false,
+    "seed": null,
+    "coverage": 0.921,
+    "avg_set_size": 10.325
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "randomize": false,
+    "seed": null,
+    "coverage": 0.747,
+    "avg_set_size": 13.071
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "randomize": true,
+    "seed": 0,
+    "coverage": 0.902,
+    "avg_set_size": 7.984
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "randomize": true,
+    "seed": 1,
+    "coverage": 0.9,
+    "avg_set_size": 7.752
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "randomize": true,
+    "seed": 2,
+    "coverage": 0.901,
+    "avg_set_size": 8.012
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "randomize": true,
+    "seed": 3,
+    "coverage": 0.894,
+    "avg_set_size": 7.485
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "randomize": true,
+    "seed": 4,
+    "coverage": 0.9,
+    "avg_set_size": 7.621
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "randomize": true,
+    "seed": 0,
+    "coverage": 0.696,
+    "avg_set_size": 10.815
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "randomize": true,
+    "seed": 1,
+    "coverage": 0.688,
+    "avg_set_size": 10.55
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "randomize": true,
+    "seed": 2,
+    "coverage": 0.699,
+    "avg_set_size": 10.842
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "randomize": true,
+    "seed": 3,
+    "coverage": 0.682,
+    "avg_set_size": 10.222
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "randomize": true,
+    "seed": 4,
+    "coverage": 0.689,
+    "avg_set_size": 10.416
+  }
+]

@@ -6,38 +6,25 @@ ImageNet-A) and a chosen conformal method (LAC/APS/RAPS), measures how
 much labelled target-domain data is needed to recalibrate and recover
 coverage close to the nominal target.
 
+Supports --randomize for APS/RAPS, using the literature-correct
+randomised tie-breaking score formula rather than this project's
+original deterministic/inclusive variant (see
+src/conformal/nonconformity.py's module docstring for why this
+distinction matters - a sensitivity check found the deterministic
+variant materially inflates APS/RAPS coverage and set size). LAC has
+no randomised variant and ignores this flag.
+
 Design: the dataset's cached embeddings are split ONCE into a fixed
-500-example "recalibration pool" (from which calibration samples of
-size N are drawn) and a fixed, constant 500-example "evaluation set"
-(never touched for calibration, always used to measure recovered
-coverage). This keeps the evaluation set's composition identical
-across every N and every repeated draw, so recovery curves reflect
-only the calibration budget - not a shrinking or shifting test pool.
-
-For each N in {10, 25, 50, 100, 250}, 20 independent random N-sized
-samples are drawn from the recalibration pool (without replacement
-within each draw; draws are independent of each other), the method is
-freshly calibrated on each sample (never reusing the frozen ImageNet
-threshold), and coverage/set size are measured on the fixed evaluation
-set. Both summary statistics (mean/std) AND the raw per-draw values
-are saved - the raw values are required for any downstream
-distributional analysis (e.g. comparison against the theoretical
-Beta-distributed calibration-conditional coverage reference), which
-cannot be done from summary statistics alone.
-
-Note on independence: all 20 draws at a given N share the SAME fixed
-500-example evaluation set. This means the 20 coverage observations
-are not fully independent samples of the unconditional coverage
-distribution - they are repeated measurements against one fixed
-target. Any distributional comparison using these raw draws (e.g. a
-KS test against the theoretical Beta reference) must treat this as a
-descriptive comparison, not a formal independence-assuming hypothesis
-test. See the analysis script and dissertation Methodology section for
-the full caveat.
+500-example "recalibration pool" and a fixed 500-example "evaluation
+set", held constant across every N and every repeated draw. For each N
+in {10, 25, 50, 100, 250}, 20 independent random N-sized samples are
+drawn from the pool, the method is freshly calibrated on each, and
+coverage/set size are measured on the fixed evaluation set. Both
+summary statistics and raw per-draw values are saved.
 
 Usage:
     python run_recalibration_sweep.py --dataset imagenet_r --method aps
-    python run_recalibration_sweep.py --dataset imagenet_a --method lac
+    python run_recalibration_sweep.py --dataset imagenet_a --method aps --randomize
 """
 
 from __future__ import annotations
@@ -61,6 +48,7 @@ _N_BUDGETS = [10, 25, 50, 100, 250]
 _NUM_DRAWS = 20
 _RECAL_POOL_SIZE = 500
 _EVAL_SET_SIZE = 500
+_RANDOMIZABLE_METHODS = {"aps", "raps"}
 
 
 def _softmax(x: np.ndarray) -> np.ndarray:
@@ -123,12 +111,22 @@ def _load_shift_probs_and_labels(
 
 
 def _run_sweep_for_dataset(
-    probs: np.ndarray, labels: np.ndarray, method_name: str, alpha: float, seed: int
+    probs: np.ndarray,
+    labels: np.ndarray,
+    method_name: str,
+    alpha: float,
+    seed: int,
+    randomize: bool = False,
 ) -> dict:
     """
     Execute the full N-budget Monte Carlo sweep for one dataset and
     one conformal method, using a fixed recalibration pool / evaluation
     set split.
+
+    randomize only takes effect for method_name in {"aps", "raps"};
+    LAC has no randomised variant and this flag is silently ignored
+    for it (not an error, since callers may loop over all three
+    methods uniformly).
     """
     rng = np.random.default_rng(seed)
 
@@ -141,7 +139,6 @@ def _run_sweep_for_dataset(
             f"but only {total_available} are cached."
         )
 
-    # Fixed split, drawn once, held constant for the entire sweep.
     all_indices = rng.permutation(total_available)
     pool_indices = all_indices[:_RECAL_POOL_SIZE]
     eval_indices = all_indices[_RECAL_POOL_SIZE : _RECAL_POOL_SIZE + _EVAL_SET_SIZE]
@@ -150,6 +147,7 @@ def _run_sweep_for_dataset(
     eval_probs, eval_labels = probs[eval_indices], labels[eval_indices]
 
     method_class = _METHOD_CLASSES[method_name]
+    use_randomize = randomize and method_name in _RANDOMIZABLE_METHODS
     results_by_n = {}
 
     for n in _N_BUDGETS:
@@ -163,7 +161,16 @@ def _run_sweep_for_dataset(
             calibration_probs = pool_probs[sample_indices]
             calibration_labels = pool_labels[sample_indices]
 
-            method = method_class(alpha=alpha)
+            if use_randomize:
+                # Distinct seed offset from the draw-sampling RNG above,
+                # so the method's internal u-draws don't correlate with
+                # which calibration examples were sampled.
+                method = method_class(
+                    alpha=alpha, randomize=True, seed=seed + n * 1000 + draw + 500_000
+                )
+            else:
+                method = method_class(alpha=alpha)
+
             method.calibrate(calibration_probs, calibration_labels)
             prediction_sets = method.predict_sets(eval_probs)
 
@@ -202,6 +209,14 @@ def main() -> None:
     parser.add_argument(
         "--method", type=str, required=True, choices=sorted(_METHOD_CLASSES.keys())
     )
+    parser.add_argument(
+        "--randomize",
+        action="store_true",
+        help="Use the literature-correct randomised score variant for APS/RAPS "
+        "(ignored for LAC, which has no randomised variant). Writes to a "
+        "separately-named results folder rather than overwriting the "
+        "deterministic (original) sweep.",
+    )
     args = parser.parse_args()
 
     configure_logging()
@@ -211,21 +226,30 @@ def main() -> None:
     logger.info(f"Loading cached probabilities for '{args.dataset}'...")
     probs, labels = _load_shift_probs_and_labels(args.dataset, config.model.name)
 
+    effective_randomize = args.randomize and args.method in _RANDOMIZABLE_METHODS
     logger.info(
         f"Starting recalibration sweep: dataset={args.dataset}, method={args.method}, "
-        f"alpha={config.calibration.alpha}, N budgets={_N_BUDGETS}, draws per N={_NUM_DRAWS}"
+        f"randomize={effective_randomize}, alpha={config.calibration.alpha}, "
+        f"N budgets={_N_BUDGETS}, draws per N={_NUM_DRAWS}"
     )
 
     results = _run_sweep_for_dataset(
-        probs, labels, args.method, config.calibration.alpha, config.seed.value
+        probs,
+        labels,
+        args.method,
+        config.calibration.alpha,
+        config.seed.value,
+        randomize=args.randomize,
     )
 
-    output_dir = Path("results") / f"RECAL-{args.dataset}-{args.method}"
+    suffix = "-randomized" if effective_randomize else ""
+    output_dir = Path("results") / f"RECAL-{args.dataset}-{args.method}{suffix}"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     output_data = {
         "dataset": args.dataset,
         "method": args.method,
+        "randomize": effective_randomize,
         "alpha": config.calibration.alpha,
         "target_coverage": 1 - config.calibration.alpha,
         "recal_pool_size": _RECAL_POOL_SIZE,
@@ -237,7 +261,7 @@ def main() -> None:
     with open(output_dir / "recovery.json", "w", encoding="utf-8") as f:
         json.dump(output_data, f, indent=2)
 
-    print(f"\n--- Recalibration Recovery Sweep: {args.dataset} / {args.method} ---")
+    print(f"\n--- Recalibration Recovery Sweep: {args.dataset} / {args.method}{suffix} ---")
     print(f"{'N':>6} {'Coverage':>18} {'Set Size':>18}")
     for n in _N_BUDGETS:
         r = results[n]

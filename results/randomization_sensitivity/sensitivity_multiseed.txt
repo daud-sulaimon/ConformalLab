@@ -1,0 +1,31 @@
+     dataset method  randomize  seed   coverage   set_size
+  imagenet_r    aps      False  None     0.9750      31.87
+  imagenet_a    aps      False  None     0.9010      44.94
+  imagenet_r    aps       True     0     0.9130      10.82
+  imagenet_r    aps       True     1     0.9210      11.77
+  imagenet_r    aps       True     2     0.9110      11.33
+  imagenet_r    aps       True     3     0.9040      10.23
+  imagenet_r    aps       True     4     0.9190      12.35
+  imagenet_a    aps       True     0     0.7040      15.41
+  imagenet_a    aps       True     1     0.7280      16.80
+  imagenet_a    aps       True     2     0.7230      16.15
+  imagenet_a    aps       True     3     0.6930      14.51
+  imagenet_a    aps       True     4     0.7410      17.66
+  imagenet_r   raps      False  None     0.9210      10.32
+  imagenet_a   raps      False  None     0.7470      13.07
+  imagenet_r   raps       True     0     0.9020       7.98
+  imagenet_r   raps       True     1     0.9000       7.75
+  imagenet_r   raps       True     2     0.9010       8.01
+  imagenet_r   raps       True     3     0.8940       7.49
+  imagenet_r   raps       True     4     0.9000       7.62
+  imagenet_a   raps       True     0     0.6960      10.81
+  imagenet_a   raps       True     1     0.6880      10.55
+  imagenet_a   raps       True     2     0.6990      10.84
+  imagenet_a   raps       True     3     0.6820      10.22
+  imagenet_a   raps       True     4     0.6890      10.42
+
+--- Randomised summary (mean +/- std across 5 seeds) ---
+  imagenet_r    aps: coverage=0.9136+/-0.0061 set_size=11.30+/-0.74
+  imagenet_a    aps: coverage=0.7178+/-0.0172 set_size=16.11+/-1.09
+  imagenet_r   raps: coverage=0.8994+/-0.0028 set_size=7.77+/-0.20
+  imagenet_a   raps: coverage=0.6908+/-0.0060 set_size=10.57+/-0.24
