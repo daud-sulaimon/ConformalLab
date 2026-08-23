@@ -4,9 +4,16 @@ ReCal-CP core: model-agnostic conformal calibration-resource analysis.
 Exposes the reusable engine behind this dissertation's experiments as
 a clean public API operating entirely on pre-computed classification
 probabilities/logits and integer labels. No CLIP, ImageNet, Hugging
-Face, or PyTorch import appears anywhere in this file - this is what
-makes the "model-agnostic" claim in the dissertation Abstract and
-Section 5 literally true, not just asserted.
+Face, or PyTorch import appears anywhere in this file.
+
+IMPORTANT: randomize defaults to True. This dissertation's Section 8.4
+established that the deterministic APS/RAPS score variant materially
+inflates coverage and set size relative to the literature-correct
+randomised formulation (Romano et al., 2020; Angelopoulos et al.,
+2020), and the randomised variant is this project's PRIMARY result
+throughout Sections 7.2-7.3. Calling this API without randomize=True
+for APS/RAPS reproduces the superseded, documented-as-incorrect
+numbers - this default exists specifically to prevent that.
 
 Two entry points:
 - baseline_evaluation(): frozen-threshold diagnostic (Sections 4.4, 7.2).
@@ -34,6 +41,8 @@ def baseline_evaluation(
     target_labels: np.ndarray,
     method: str,
     alpha: float = 0.1,
+    randomize: bool = True,
+    seed: int = 0,
 ) -> dict:
     """
     Frozen-threshold diagnostic: calibrate once on source data,
@@ -42,37 +51,47 @@ def baseline_evaluation(
     Parameters
     ----------
     source_probs, source_labels
-        Calibration data: probabilities (n_source, n_classes), integer
-        labels (n_source,).
+        Calibration data.
     target_probs, target_labels
-        Evaluation data: probabilities (n_target, n_classes_target),
-        integer labels (n_target,). n_classes_target need not equal
-        the source's class count - the frozen threshold applies to
-        whichever array is passed at prediction time, matching this
-        dissertation's own ImageNet-R/A protocol (Section 7.2).
+        Evaluation data.
     method
         "lac", "aps", or "raps".
     alpha
         Miscoverage rate. Defaults to 0.1.
+    randomize
+        Use the literature-correct randomised score variant for
+        APS/RAPS. Defaults to True - this project's primary,
+        dissertation-verified setting (Section 8.4). Ignored for LAC,
+        which has no randomised variant. Set False only to deliberately
+        reproduce this project's superseded deterministic results.
+    seed
+        Seed for the randomised score's internal RNG. Only relevant
+        when randomize=True.
 
     Returns
     -------
     dict
-        {"method", "target_coverage", "empirical_coverage",
+        {"method", "randomize", "target_coverage", "empirical_coverage",
          "average_set_size", "num_samples", "coverage_gap"}.
 
     Examples
     --------
     >>> report = baseline_evaluation(src_p, src_y, tgt_p, tgt_y, method="aps")
     >>> report["coverage_gap"]
-    -0.194
+    -0.182
     """
-    conformal_method = create_conformal_method(method, alpha=alpha)
+    method_kwargs = {"alpha": alpha}
+    if method in ("aps", "raps"):
+        method_kwargs["randomize"] = randomize
+        method_kwargs["seed"] = seed
+
+    conformal_method = create_conformal_method(method, **method_kwargs)
     conformal_method.calibrate(source_probs, source_labels)
     prediction_sets = conformal_method.predict_sets(target_probs)
 
     report = coverage_report(prediction_sets, target_labels, alpha=alpha)
     report["method"] = method
+    report["randomize"] = randomize if method in ("aps", "raps") else None
     report["coverage_gap"] = report["empirical_coverage"] - report["target_coverage"]
     return report
 
@@ -86,6 +105,7 @@ def recovery_sweep(
     alpha: float = 0.1,
     budgets=DEFAULT_BUDGETS,
     draws: int = DEFAULT_DRAWS,
+    randomize: bool = True,
     recal_pool_size: Optional[int] = None,
     eval_set_size: Optional[int] = None,
     seed: int = 42,
@@ -93,11 +113,6 @@ def recovery_sweep(
     """
     Monte Carlo target-domain recalibration budget sweep (Sections
     4.4, 7.3) as a model-agnostic function on raw arrays.
-
-    Accepts EITHER target_probs (already softmax-normalised) OR
-    target_logits (raw, normalised internally) - use whichever you have.
-    Operates entirely on the target-domain pool, split internally into
-    a fixed calibration pool and a fixed evaluation set.
 
     Parameters
     ----------
@@ -113,6 +128,10 @@ def recovery_sweep(
         Calibration sample sizes to sweep. Defaults to (10,25,50,100,250).
     draws
         Repeated draws per budget. Defaults to 20.
+    randomize
+        Use the literature-correct randomised score variant for
+        APS/RAPS. Defaults to True - this project's primary,
+        dissertation-verified setting (Section 8.4). Ignored for LAC.
     recal_pool_size, eval_set_size
         Sizes of the two fixed splits carved from the target pool.
         Default to half the available data each.
@@ -122,8 +141,8 @@ def recovery_sweep(
     Returns
     -------
     dict
-        {"method", "alpha", "target_coverage", "budgets", "draws",
-         "results_by_n": {N: {...}}, "n_star", "n_star_status"}.
+        {"method", "randomize", "alpha", "target_coverage", "budgets",
+         "draws", "results_by_n": {N: {...}}, "n_star", "n_star_status"}.
 
     Examples
     --------
@@ -161,6 +180,8 @@ def recovery_sweep(
     pool_probs, pool_labels = target_probs[pool_indices], target_labels[pool_indices]
     eval_probs, eval_labels = target_probs[eval_indices], target_labels[eval_indices]
 
+    use_randomize = randomize and method in ("aps", "raps")
+
     results_by_n = {}
     for n in budgets:
         if n > pool_size:
@@ -171,7 +192,14 @@ def recovery_sweep(
             draw_rng = np.random.default_rng(seed + n * 1000 + draw)
             sample_indices = draw_rng.choice(pool_size, size=n, replace=False)
 
-            method_obj = create_conformal_method(method, alpha=alpha)
+            method_kwargs = {"alpha": alpha}
+            if use_randomize:
+                method_kwargs["randomize"] = True
+                method_kwargs["seed"] = seed + n * 1000 + draw + 500_000
+            elif method in ("aps", "raps"):
+                method_kwargs["randomize"] = False
+
+            method_obj = create_conformal_method(method, **method_kwargs)
             method_obj.calibrate(pool_probs[sample_indices], pool_labels[sample_indices])
             prediction_sets = method_obj.predict_sets(eval_probs)
 
@@ -192,6 +220,7 @@ def recovery_sweep(
 
     return {
         "method": method,
+        "randomize": use_randomize,
         "alpha": alpha,
         "target_coverage": 1 - alpha,
         "budgets": list(budgets),
