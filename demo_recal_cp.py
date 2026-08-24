@@ -14,6 +14,12 @@ tests/test_core_portability.py, which contains no CLIP/ImageNet import
 at all. This script exists to show the same core engine running on
 real research data.
 
+Internal INFO-level logging (per-draw calibration messages from the
+sweep's 100 internal calls) is suppressed here for a clean live demo
+- the real research scripts (run_split_cp.py, run_shift_eval.py,
+run_recalibration_sweep.py) keep full logging for reproducibility;
+only this demo entry point silences it, for presentation purposes.
+
 Usage:
     python demo_recal_cp.py --dataset imagenet_a --method aps
     python demo_recal_cp.py --dataset imagenet_r --method lac
@@ -22,6 +28,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import logging
 from pathlib import Path
 
 import numpy as np
@@ -70,6 +77,10 @@ def main() -> None:
     args = parser.parse_args()
 
     configure_logging()
+    # Suppress internal INFO-level noise (per-draw calibration messages)
+    # for a clean live demo. Does not affect the real research scripts.
+    logging.getLogger("conformallab").setLevel(logging.WARNING)
+
     config = load_config(args.config)
     set_seed(config.seed.value)
 
