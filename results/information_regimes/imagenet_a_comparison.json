@@ -1,0 +1,92 @@
+[
+  {
+    "regime": "labelled_N25",
+    "target_labels_used": 25,
+    "coverage_mean": 0.9449000000000002,
+    "coverage_std": 0.04737710417490709,
+    "set_size_mean": 73.8702,
+    "set_size_std": 37.36562635310695,
+    "coverage_gap": 0.04490000000000016
+  },
+  {
+    "regime": "ECP2",
+    "target_labels_used": 0,
+    "coverage_mean": 0.9174,
+    "coverage_std": 0.013328165665236905,
+    "set_size_mean": 39.952799999999996,
+    "set_size_std": 1.0327403158587345,
+    "coverage_gap": 0.01739999999999997
+  },
+  {
+    "regime": "labelled_N10",
+    "target_labels_used": 10,
+    "coverage_mean": 0.9163,
+    "coverage_std": 0.06985205795107255,
+    "set_size_mean": 57.78830000000001,
+    "set_size_std": 31.140474879327066,
+    "coverage_gap": 0.01629999999999998
+  },
+  {
+    "regime": "labelled_N100",
+    "target_labels_used": 100,
+    "coverage_mean": 0.9148,
+    "coverage_std": 0.027491089465497713,
+    "set_size_mean": 41.65509999999999,
+    "set_size_std": 10.309559708833351,
+    "coverage_gap": 0.014799999999999924
+  },
+  {
+    "regime": "labelled_N50",
+    "target_labels_used": 50,
+    "coverage_mean": 0.9141999999999999,
+    "coverage_std": 0.03921173293798681,
+    "set_size_mean": 45.1934,
+    "set_size_std": 17.652325151095535,
+    "coverage_gap": 0.01419999999999988
+  },
+  {
+    "regime": "labelled_N250",
+    "target_labels_used": 250,
+    "coverage_mean": 0.9025000000000001,
+    "coverage_std": 0.02787023501874357,
+    "set_size_mean": 36.686,
+    "set_size_std": 6.042760064738629,
+    "coverage_gap": 0.0025000000000000577
+  },
+  {
+    "regime": "ECP1",
+    "target_labels_used": 0,
+    "coverage_mean": 0.8272,
+    "coverage_std": 0.015171025014810298,
+    "set_size_mean": 21.2718,
+    "set_size_std": 0.4257961484090715,
+    "coverage_gap": -0.07279999999999998
+  },
+  {
+    "regime": "frozen_source",
+    "target_labels_used": 0,
+    "coverage_mean": 0.7020000000000001,
+    "coverage_std": 0.015671630419327787,
+    "set_size_mean": 9.8547,
+    "set_size_std": 0.18080738369878596,
+    "coverage_gap": -0.19799999999999995
+  },
+  {
+    "regime": "pseudo_calibration",
+    "target_labels_used": 0,
+    "coverage_mean": 0.3447,
+    "coverage_std": 0.015572732579736919,
+    "set_size_mean": 1.3089,
+    "set_size_std": 0.05575831776515499,
+    "coverage_gap": -0.5553
+  },
+  {
+    "regime": "pseudo_filtered_0.9",
+    "target_labels_used": 0,
+    "coverage_mean": 0.2826000000000001,
+    "coverage_std": 0.013222707740852466,
+    "set_size_mean": 1.0,
+    "set_size_std": 0.0,
+    "coverage_gap": -0.6174
+  }
+]

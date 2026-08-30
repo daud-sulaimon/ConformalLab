@@ -1,0 +1,20 @@
+ImageNet-A target-information regime comparison
+LAC, alpha=0.1, 20 draws, candidate pool=250, eval=500, 200-class space
+Zero-shot CLIP top-1 accuracy on this target sample: 0.285
+Pre-registered recovery criterion: |coverage-0.90| <= 0.02 AND SD <= 0.03
+
+                          Regime  Labels  Coverage      SD  Gap(pp)  SetSize  Criterion
+------------------------------------------------------------------------------------------
+                Frozen source CP       0    0.7020  0.0157    19.80     9.85       fail
+              Pseudo-calibration       0    0.3447  0.0156    55.53     1.31       fail
+        Filtered pseudo (c>=0.9)       0    0.2826  0.0132    61.74     1.00       fail
+                   ECP1 (linear)       0    0.8272  0.0152     7.28    21.27       fail
+                ECP2 (quadratic)       0    0.9174  0.0133     1.74    39.95       PASS
+                   Labelled N=10      10    0.9163  0.0699     1.63    57.79       fail
+                   Labelled N=25      25    0.9449  0.0474     4.49    73.87       fail
+                   Labelled N=50      50    0.9142  0.0392     1.42    45.19       fail
+                  Labelled N=100     100    0.9148  0.0275     1.48    41.66       PASS
+                  Labelled N=250     250    0.9025  0.0279     0.25    36.69       PASS
+
+Smallest tested labelled budget meeting the criterion: N=100
+Label-free regimes meeting the criterion: ECP2 (quadratic)

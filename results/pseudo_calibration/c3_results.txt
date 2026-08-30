@@ -1,0 +1,13 @@
+      dataset method     acc  true_cov  pseudo_cov      gap  true_size  pseudo_size
+     imagenet    lac   0.591    0.9122      0.6400  -0.2722       6.57         1.12
+     imagenet    aps   0.591    0.9213      0.7660  -0.1553      18.29         3.64
+     imagenet   raps   0.591    0.9166      0.7566  -0.1600       8.29         2.91
+  imagenet_v2    lac   0.539    0.9077      0.5925  -0.3152       9.85         1.16
+  imagenet_v2    aps   0.539    0.9181      0.7080  -0.2101      24.78         3.84
+  imagenet_v2   raps   0.539    0.9089      0.6994  -0.2095      11.26         3.07
+   imagenet_r    lac   0.602    0.9063      0.6522  -0.2541       8.14         1.12
+   imagenet_r    aps   0.602    0.9205      0.7821  -0.1384      12.89         3.81
+   imagenet_r   raps   0.602    0.9091      0.7785  -0.1306       9.14         3.24
+   imagenet_a    lac   0.285    0.9025      0.3395  -0.5630      36.69         1.22
+   imagenet_a    aps   0.285    0.9074      0.3997  -0.5077      47.01         2.62
+   imagenet_a   raps   0.285    0.9000      0.3961  -0.5039      37.82         2.50

@@ -1,0 +1,362 @@
+[
+  {
+    "dataset": "imagenet",
+    "method": "lac",
+    "threshold": 0.5,
+    "n_matched": 150,
+    "filtered_true_coverage": 0.8593,
+    "random_true_coverage_mean": 0.9184000000000001,
+    "random_true_coverage_std": 0.020567936211491885,
+    "selection_effect": -0.05910000000000015
+  },
+  {
+    "dataset": "imagenet",
+    "method": "lac",
+    "threshold": 0.7,
+    "n_matched": 104,
+    "filtered_true_coverage": 0.7621999999999999,
+    "random_true_coverage_mean": 0.9279,
+    "random_true_coverage_std": 0.02461280154716238,
+    "selection_effect": -0.16570000000000007
+  },
+  {
+    "dataset": "imagenet",
+    "method": "lac",
+    "threshold": 0.9,
+    "n_matched": 52,
+    "filtered_true_coverage": 0.3441,
+    "random_true_coverage_mean": 0.9301,
+    "random_true_coverage_std": 0.036444341124514765,
+    "selection_effect": -0.5860000000000001
+  },
+  {
+    "dataset": "imagenet",
+    "method": "aps",
+    "threshold": 0.5,
+    "n_matched": 150,
+    "filtered_true_coverage": 0.9269999999999999,
+    "random_true_coverage_mean": 0.9287000000000001,
+    "random_true_coverage_std": 0.020593931144878563,
+    "selection_effect": -0.0017000000000001458
+  },
+  {
+    "dataset": "imagenet",
+    "method": "aps",
+    "threshold": 0.7,
+    "n_matched": 104,
+    "filtered_true_coverage": 0.9319999999999998,
+    "random_true_coverage_mean": 0.9313,
+    "random_true_coverage_std": 0.024464464024376232,
+    "selection_effect": 0.0006999999999998119
+  },
+  {
+    "dataset": "imagenet",
+    "method": "aps",
+    "threshold": 0.9,
+    "n_matched": 52,
+    "filtered_true_coverage": 0.9454,
+    "random_true_coverage_mean": 0.9378000000000002,
+    "random_true_coverage_std": 0.024874886934416387,
+    "selection_effect": 0.007599999999999829
+  },
+  {
+    "dataset": "imagenet",
+    "method": "raps",
+    "threshold": 0.5,
+    "n_matched": 150,
+    "filtered_true_coverage": 0.9004999999999999,
+    "random_true_coverage_mean": 0.9225000000000001,
+    "random_true_coverage_std": 0.022314793299513205,
+    "selection_effect": -0.02200000000000024
+  },
+  {
+    "dataset": "imagenet",
+    "method": "raps",
+    "threshold": 0.7,
+    "n_matched": 104,
+    "filtered_true_coverage": 0.9049999999999999,
+    "random_true_coverage_mean": 0.9313,
+    "random_true_coverage_std": 0.021561771726831703,
+    "selection_effect": -0.0263000000000001
+  },
+  {
+    "dataset": "imagenet",
+    "method": "raps",
+    "threshold": 0.9,
+    "n_matched": 52,
+    "filtered_true_coverage": 0.9114000000000001,
+    "random_true_coverage_mean": 0.9316000000000001,
+    "random_true_coverage_std": 0.02654505603685927,
+    "selection_effect": -0.020199999999999996
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "lac",
+    "threshold": 0.5,
+    "n_matched": 137,
+    "filtered_true_coverage": 0.8223,
+    "random_true_coverage_mean": 0.9136,
+    "random_true_coverage_std": 0.018650469162999613,
+    "selection_effect": -0.09129999999999994
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "lac",
+    "threshold": 0.7,
+    "n_matched": 89,
+    "filtered_true_coverage": 0.7857000000000001,
+    "random_true_coverage_mean": 0.9188000000000001,
+    "random_true_coverage_std": 0.01900947132352711,
+    "selection_effect": -0.1331
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "lac",
+    "threshold": 0.9,
+    "n_matched": 46,
+    "filtered_true_coverage": 0.4093000000000001,
+    "random_true_coverage_mean": 0.9362000000000001,
+    "random_true_coverage_std": 0.03613253381649284,
+    "selection_effect": -0.5269
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "aps",
+    "threshold": 0.5,
+    "n_matched": 137,
+    "filtered_true_coverage": 0.9258000000000003,
+    "random_true_coverage_mean": 0.9258,
+    "random_true_coverage_std": 0.021880585001320212,
+    "selection_effect": 3.3306690738754696e-16
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "aps",
+    "threshold": 0.7,
+    "n_matched": 89,
+    "filtered_true_coverage": 0.9398,
+    "random_true_coverage_mean": 0.9248000000000001,
+    "random_true_coverage_std": 0.026179381199715145,
+    "selection_effect": 0.014999999999999902
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "aps",
+    "threshold": 0.9,
+    "n_matched": 46,
+    "filtered_true_coverage": 0.9547000000000001,
+    "random_true_coverage_mean": 0.9362999999999999,
+    "random_true_coverage_std": 0.039513415443365556,
+    "selection_effect": 0.018400000000000194
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "raps",
+    "threshold": 0.5,
+    "n_matched": 137,
+    "filtered_true_coverage": 0.8808,
+    "random_true_coverage_mean": 0.9140999999999998,
+    "random_true_coverage_std": 0.01925071427246271,
+    "selection_effect": -0.033299999999999774
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "raps",
+    "threshold": 0.7,
+    "n_matched": 89,
+    "filtered_true_coverage": 0.8859,
+    "random_true_coverage_mean": 0.9155,
+    "random_true_coverage_std": 0.01965578795164415,
+    "selection_effect": -0.02959999999999996
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "raps",
+    "threshold": 0.9,
+    "n_matched": 46,
+    "filtered_true_coverage": 0.8947,
+    "random_true_coverage_mean": 0.9283999999999999,
+    "random_true_coverage_std": 0.041969512744371947,
+    "selection_effect": -0.03369999999999984
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "lac",
+    "threshold": 0.5,
+    "n_matched": 152,
+    "filtered_true_coverage": 0.8234,
+    "random_true_coverage_mean": 0.9136999999999998,
+    "random_true_coverage_std": 0.01891322288770478,
+    "selection_effect": -0.09029999999999982
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "lac",
+    "threshold": 0.7,
+    "n_matched": 113,
+    "filtered_true_coverage": 0.5698000000000001,
+    "random_true_coverage_mean": 0.9193,
+    "random_true_coverage_std": 0.021196933740520105,
+    "selection_effect": -0.3494999999999999
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "lac",
+    "threshold": 0.9,
+    "n_matched": 64,
+    "filtered_true_coverage": 0.2338,
+    "random_true_coverage_mean": 0.9206,
+    "random_true_coverage_std": 0.03766218262395316,
+    "selection_effect": -0.6868
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "threshold": 0.5,
+    "n_matched": 152,
+    "filtered_true_coverage": 0.9117999999999998,
+    "random_true_coverage_mean": 0.9219000000000002,
+    "random_true_coverage_std": 0.019146540157427908,
+    "selection_effect": -0.010100000000000331
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "threshold": 0.7,
+    "n_matched": 113,
+    "filtered_true_coverage": 0.9079,
+    "random_true_coverage_mean": 0.9272000000000002,
+    "random_true_coverage_std": 0.02130164312911093,
+    "selection_effect": -0.019300000000000206
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "threshold": 0.9,
+    "n_matched": 64,
+    "filtered_true_coverage": 0.9226000000000001,
+    "random_true_coverage_mean": 0.9314999999999998,
+    "random_true_coverage_std": 0.032285445637314635,
+    "selection_effect": -0.008899999999999686
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "threshold": 0.5,
+    "n_matched": 152,
+    "filtered_true_coverage": 0.8824,
+    "random_true_coverage_mean": 0.9126000000000001,
+    "random_true_coverage_std": 0.018953627621117807,
+    "selection_effect": -0.030200000000000116
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "threshold": 0.7,
+    "n_matched": 113,
+    "filtered_true_coverage": 0.8735999999999999,
+    "random_true_coverage_mean": 0.9215,
+    "random_true_coverage_std": 0.02237744400060024,
+    "selection_effect": -0.047900000000000054
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "threshold": 0.9,
+    "n_matched": 64,
+    "filtered_true_coverage": 0.8836,
+    "random_true_coverage_mean": 0.9228,
+    "random_true_coverage_std": 0.026895352758422766,
+    "selection_effect": -0.0391999999999999
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "lac",
+    "threshold": 0.5,
+    "n_matched": 105,
+    "filtered_true_coverage": 0.9093,
+    "random_true_coverage_mean": 0.9235,
+    "random_true_coverage_std": 0.025509802037648188,
+    "selection_effect": -0.01419999999999999
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "lac",
+    "threshold": 0.7,
+    "n_matched": 61,
+    "filtered_true_coverage": 0.9292999999999999,
+    "random_true_coverage_mean": 0.9058999999999999,
+    "random_true_coverage_std": 0.04436879534086992,
+    "selection_effect": 0.023399999999999976
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "lac",
+    "threshold": 0.9,
+    "n_matched": 20,
+    "filtered_true_coverage": 0.9784,
+    "random_true_coverage_mean": 0.9478,
+    "random_true_coverage_std": 0.03730361912737153,
+    "selection_effect": 0.03060000000000007
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "threshold": 0.5,
+    "n_matched": 105,
+    "filtered_true_coverage": 0.9347999999999999,
+    "random_true_coverage_mean": 0.9209999999999999,
+    "random_true_coverage_std": 0.022049943310584706,
+    "selection_effect": 0.013799999999999923
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "threshold": 0.7,
+    "n_matched": 61,
+    "filtered_true_coverage": 0.9541000000000002,
+    "random_true_coverage_mean": 0.9114000000000001,
+    "random_true_coverage_std": 0.03567688327194515,
+    "selection_effect": 0.04270000000000007
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "threshold": 0.9,
+    "n_matched": 20,
+    "filtered_true_coverage": 0.9824999999999999,
+    "random_true_coverage_mean": 0.9475999999999999,
+    "random_true_coverage_std": 0.04235374835832123,
+    "selection_effect": 0.03490000000000004
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "threshold": 0.5,
+    "n_matched": 105,
+    "filtered_true_coverage": 0.8538,
+    "random_true_coverage_mean": 0.9201999999999998,
+    "random_true_coverage_std": 0.029798657687889214,
+    "selection_effect": -0.06639999999999979
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "threshold": 0.7,
+    "n_matched": 61,
+    "filtered_true_coverage": 0.8512000000000001,
+    "random_true_coverage_mean": 0.9190999999999999,
+    "random_true_coverage_std": 0.03913808886494076,
+    "selection_effect": -0.06789999999999985
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "threshold": 0.9,
+    "n_matched": 20,
+    "filtered_true_coverage": 0.905,
+    "random_true_coverage_mean": 0.9465999999999999,
+    "random_true_coverage_std": 0.03852323973914965,
+    "selection_effect": -0.04159999999999986
+  }
+]

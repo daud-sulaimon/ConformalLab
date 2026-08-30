@@ -1,0 +1,13 @@
+ImageNet-A, LAC, alpha=0.1, 20 draws, eval N=500, 200-class space
+
+                    regime  labels   coverage   cov_sd  set_size  size_sd      gap
+              labelled_N25      25     0.9449   0.0474     73.87    37.37  +0.0449
+                      ECP2       0     0.9174   0.0133     39.95     1.03  +0.0174
+              labelled_N10      10     0.9163   0.0699     57.79    31.14  +0.0163
+             labelled_N100     100     0.9148   0.0275     41.66    10.31  +0.0148
+              labelled_N50      50     0.9142   0.0392     45.19    17.65  +0.0142
+             labelled_N250     250     0.9025   0.0279     36.69     6.04  +0.0025
+                      ECP1       0     0.8272   0.0152     21.27     0.43  -0.0728
+             frozen_source       0     0.7020   0.0157      9.85     0.18  -0.1980
+        pseudo_calibration       0     0.3447   0.0156      1.31     0.06  -0.5553
+       pseudo_filtered_0.9       0     0.2826   0.0132      1.00     0.00  -0.6174

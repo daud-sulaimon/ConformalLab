@@ -1,0 +1,290 @@
+[
+  {
+    "dataset": "imagenet",
+    "method": "lac",
+    "threshold": 0.5,
+    "precision": 0.7735834637049498,
+    "n_eff": 149.55,
+    "delta_filter_pseudo": -0.20000000000000012
+  },
+  {
+    "dataset": "imagenet",
+    "method": "lac",
+    "threshold": 0.7,
+    "precision": 0.8778790423122619,
+    "n_eff": 103.65,
+    "delta_filter_pseudo": -0.3149000000000001
+  },
+  {
+    "dataset": "imagenet",
+    "method": "lac",
+    "threshold": 0.9,
+    "precision": 0.9508757532478374,
+    "n_eff": 51.65,
+    "delta_filter_pseudo": -0.4657
+  },
+  {
+    "dataset": "imagenet",
+    "method": "aps",
+    "threshold": 0.5,
+    "precision": 0.7735834637049498,
+    "n_eff": 149.55,
+    "delta_filter_pseudo": 0.05480000000000018
+  },
+  {
+    "dataset": "imagenet",
+    "method": "aps",
+    "threshold": 0.7,
+    "precision": 0.8778790423122619,
+    "n_eff": 103.65,
+    "delta_filter_pseudo": 0.06740000000000002
+  },
+  {
+    "dataset": "imagenet",
+    "method": "aps",
+    "threshold": 0.9,
+    "precision": 0.9508757532478374,
+    "n_eff": 51.65,
+    "delta_filter_pseudo": 0.11880000000000013
+  },
+  {
+    "dataset": "imagenet",
+    "method": "raps",
+    "threshold": 0.5,
+    "precision": 0.7735834637049498,
+    "n_eff": 149.55,
+    "delta_filter_pseudo": 0.05249999999999999
+  },
+  {
+    "dataset": "imagenet",
+    "method": "raps",
+    "threshold": 0.7,
+    "precision": 0.8778790423122619,
+    "n_eff": 103.65,
+    "delta_filter_pseudo": 0.06279999999999997
+  },
+  {
+    "dataset": "imagenet",
+    "method": "raps",
+    "threshold": 0.9,
+    "precision": 0.9508757532478374,
+    "n_eff": 51.65,
+    "delta_filter_pseudo": 0.10179999999999989
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "lac",
+    "threshold": 0.5,
+    "precision": 0.7553581923537279,
+    "n_eff": 136.95,
+    "delta_filter_pseudo": -0.2154999999999999
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "lac",
+    "threshold": 0.7,
+    "precision": 0.8546347971232133,
+    "n_eff": 88.55,
+    "delta_filter_pseudo": -0.32649999999999996
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "lac",
+    "threshold": 0.9,
+    "precision": 0.9510727175190098,
+    "n_eff": 46.35,
+    "delta_filter_pseudo": -0.476
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "aps",
+    "threshold": 0.5,
+    "precision": 0.7553581923537279,
+    "n_eff": 136.95,
+    "delta_filter_pseudo": 0.05740000000000012
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "aps",
+    "threshold": 0.7,
+    "precision": 0.8546347971232133,
+    "n_eff": 88.55,
+    "delta_filter_pseudo": 0.12929999999999997
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "aps",
+    "threshold": 0.9,
+    "precision": 0.9510727175190098,
+    "n_eff": 46.35,
+    "delta_filter_pseudo": 0.1502
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "raps",
+    "threshold": 0.5,
+    "precision": 0.7553581923537279,
+    "n_eff": 136.95,
+    "delta_filter_pseudo": 0.04930000000000012
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "raps",
+    "threshold": 0.7,
+    "precision": 0.8546347971232133,
+    "n_eff": 88.55,
+    "delta_filter_pseudo": 0.10939999999999994
+  },
+  {
+    "dataset": "imagenet_v2",
+    "method": "raps",
+    "threshold": 0.9,
+    "precision": 0.9510727175190098,
+    "n_eff": 46.35,
+    "delta_filter_pseudo": 0.11329999999999996
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "lac",
+    "threshold": 0.5,
+    "precision": 0.8238748102505197,
+    "n_eff": 152.5,
+    "delta_filter_pseudo": -0.18420000000000003
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "lac",
+    "threshold": 0.7,
+    "precision": 0.9129168431881544,
+    "n_eff": 112.75,
+    "delta_filter_pseudo": -0.27130000000000004
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "lac",
+    "threshold": 0.9,
+    "precision": 0.983895981780336,
+    "n_eff": 64.15,
+    "delta_filter_pseudo": -0.4276000000000001
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "threshold": 0.5,
+    "precision": 0.8238748102505197,
+    "n_eff": 152.5,
+    "delta_filter_pseudo": 0.04959999999999998
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "threshold": 0.7,
+    "precision": 0.9129168431881544,
+    "n_eff": 112.75,
+    "delta_filter_pseudo": 0.0685
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "aps",
+    "threshold": 0.9,
+    "precision": 0.983895981780336,
+    "n_eff": 64.15,
+    "delta_filter_pseudo": 0.10519999999999996
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "threshold": 0.5,
+    "precision": 0.8238748102505197,
+    "n_eff": 152.5,
+    "delta_filter_pseudo": 0.037799999999999945
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "threshold": 0.7,
+    "precision": 0.9129168431881544,
+    "n_eff": 112.75,
+    "delta_filter_pseudo": 0.053099999999999925
+  },
+  {
+    "dataset": "imagenet_r",
+    "method": "raps",
+    "threshold": 0.9,
+    "precision": 0.983895981780336,
+    "n_eff": 64.15,
+    "delta_filter_pseudo": 0.08230000000000015
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "lac",
+    "threshold": 0.5,
+    "precision": 0.4618744058559864,
+    "n_eff": 104.55,
+    "delta_filter_pseudo": -0.17420000000000005
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "lac",
+    "threshold": 0.7,
+    "precision": 0.5217284022080058,
+    "n_eff": 60.6,
+    "delta_filter_pseudo": -0.24749999999999997
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "lac",
+    "threshold": 0.9,
+    "precision": 0.6676188596442668,
+    "n_eff": 20.5,
+    "delta_filter_pseudo": -0.31270000000000003
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "threshold": 0.5,
+    "precision": 0.4618744058559864,
+    "n_eff": 104.55,
+    "delta_filter_pseudo": 0.07010000000000005
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "threshold": 0.7,
+    "precision": 0.5217284022080058,
+    "n_eff": 60.6,
+    "delta_filter_pseudo": 0.16439999999999982
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "aps",
+    "threshold": 0.9,
+    "precision": 0.6676188596442668,
+    "n_eff": 20.5,
+    "delta_filter_pseudo": 0.2512
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "threshold": 0.5,
+    "precision": 0.4618744058559864,
+    "n_eff": 104.55,
+    "delta_filter_pseudo": 0.06509999999999999
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "threshold": 0.7,
+    "precision": 0.5217284022080058,
+    "n_eff": 60.6,
+    "delta_filter_pseudo": 0.1376
+  },
+  {
+    "dataset": "imagenet_a",
+    "method": "raps",
+    "threshold": 0.9,
+    "precision": 0.6676188596442668,
+    "n_eff": 20.5,
+    "delta_filter_pseudo": 0.16790000000000005
+  }
+]

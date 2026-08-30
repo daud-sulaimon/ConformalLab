@@ -1,0 +1,10 @@
+      dataset  variant   u_test    scale  eff_thresh  coverage   cov_gap  set_size
+  imagenet_v2   frozen      nan    1.000    0.010333    0.8779   -0.0221      7.67
+  imagenet_v2     ECP1    3.478    3.478    0.002971    0.9449   +0.0449     16.93
+  imagenet_v2     ECP2    3.478   12.110    0.000853    0.9736   +0.0736     37.64
+   imagenet_r   frozen      nan    1.000    0.010333    0.8990   -0.0010      7.55
+   imagenet_r     ECP1    3.174    3.174    0.003256    0.9463   +0.0463     15.33
+   imagenet_r     ECP2    3.174   10.085    0.001025    0.9774   +0.0774     28.26
+   imagenet_a   frozen      nan    1.000    0.010333    0.7020   -0.1980      9.85
+   imagenet_a     ECP1    3.337    3.337    0.003097    0.8272   -0.0728     21.27
+   imagenet_a     ECP2    3.337   11.140    0.000928    0.9174   +0.0174     39.95
