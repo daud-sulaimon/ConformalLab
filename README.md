@@ -1,6 +1,9 @@
 # ConformalLab / ReCal-CP
 
-**ConformalLab** is the research codebase for the MSc dissertation *Which Target-Domain Information Restores Conformal Reliability for Zero-Shot Vision-Language Models Under Distribution Shift?* (Daud Sulaimon). It implements and compares four strategies for restoring conformal prediction reliability when a zero-shot CLIP model is deployed under distribution shift: frozen source calibration, pseudo-calibration, confidence-filtered pseudo-calibration, entropy-scaled calibration (ECP), and labelled target-domain recalibration.
+**ConformalLab** is the research codebase for the MSc dissertation *Target-Free Conformal Adaptation for
+Zero-Shot Vision–Language Models
+Under Distribution Shift* (Daud Sulaimon). 
+It implements and compares four strategies for restoring conformal prediction reliability when a zero-shot CLIP model is deployed under distribution shift: frozen source calibration, pseudo-calibration, confidence-filtered pseudo-calibration, entropy-scaled calibration (ECP), and labelled target-domain recalibration.
 
 **ReCal-CP** is the model-agnostic evaluation core (`src/conformal/core.py`) this comparison is built on — verified to contain no CLIP or ImageNet dependency, so the same evaluation logic works on any classifier's probability/logit outputs.
 
@@ -137,6 +140,6 @@ pytest -v
 
 ---
 
-## License
+
 
 MIT. See `LICENSE`.
